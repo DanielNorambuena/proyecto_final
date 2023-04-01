@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*General*/
+.App {
+  background-color: #f7f8fa;
+  font-family: 'Poppins', sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.barra {
+  height: 6rem;
+  box-shadow: 0 0 10px 0 #e1e1e1;
+  font-size: 11pt;
+  display: flex;
+  justify-content: end;
+}
+
+.view {
+  color: rgb(146, 146, 146);
+  text-decoration: none;
+  padding: 0.5em;
+}
+
+.viewActiva {
+  color: rgb(63, 63, 63);
+  text-decoration: none;
+  padding: 0.5em;
+}
+
+.editForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 12rem auto;
+}
+
+.editForm input{
+border:1px solid rgb(139, 139, 139);
+border-radius: 14px;
+margin-bottom: 1em;
+padding: 0.5em;
+width: 50%;
+}

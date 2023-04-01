@@ -9,6 +9,7 @@ import Registro from './Views/Registro.jsx'
 import Favoritos from './Views/Favoritos.jsx'
 import Carrito from './Views/Carrito.jsx'
 import Descripcion from './Views/Descripcion.jsx'
+import CrearP from './Views/CrearP.jsx';
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
           <Route path='/Carrito' element={<Carrito></Carrito>}></Route>
           <Route path='/Favoritos' element={<Favoritos></Favoritos>}></Route>
           <Route path='/Descripcion' element={<Descripcion></Descripcion>}></Route>
-
+          <Route path='/CrearPublicacion' element={<CrearP></CrearP>}></Route>
         </Routes>
         <Footer></Footer>
       </BrowserRouter>

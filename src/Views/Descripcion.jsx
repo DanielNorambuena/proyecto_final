@@ -19,8 +19,6 @@ const Descripcion = () => {
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           <h4 style={{ marginBottom: '1.5em' }}>Precio $9.990</h4>
 
-          /** Botones */
-
           <div className='d-flex' style={{ height: '2.5em' }}>
             <button style={{ marginRight: '5px' }} type="button" class="btn btn-outline-dark">-</button>
             <p style={{ marginTop: '0.5em', marginLeft:'0.5em', marginRight:'0.5em'}}>5</p>

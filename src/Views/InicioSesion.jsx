@@ -5,8 +5,6 @@ const InicioSesion = () => {
     <div>
       <h1 style={{ fontSize: '18pt', marginTop: '3em', marginBottom: '2em', textAlign: 'center' }}>Inicia Sesión</h1>
 
-/** Formulario */
-
       <form className='editForm'>
         <input type="text" name="email" placeholder='Email' />
         <input type="password" name="password" placeholder='Contraseña' />

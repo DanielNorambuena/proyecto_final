@@ -15,7 +15,6 @@ const CrearP = () => {
           <button style={{ margin: '1em', borderRadius: '16px', paddingRight: '2em', paddingLeft: '2em' }} type="button" class="btn btn-outline-dark">Subir foto</button>
         </div>
 
-        /** Formulario */
 
         <FloatingLabel style={{ width: '50%', marginTop:'1em' }} controlId="floatingTextarea2" label="Descripción del producto">
           <Form.Control
@@ -23,7 +22,6 @@ const CrearP = () => {
           />
         </FloatingLabel>
 
-        /** Boton */
         <button style={{ margin: '1em', borderRadius: '16px', paddingRight: '3em', paddingLeft: '3em' }} type="button" class="btn btn-outline-dark">Publicar</button>
 
       </form>

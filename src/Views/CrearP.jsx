@@ -1,28 +1,33 @@
 import React from 'react'
-import Perfil from '../Components/Perfil'
+import FloatingLabel from 'react-bootstrap/FloatingLabel';
+import Form from 'react-bootstrap/Form';
 
 const CrearP = () => {
   return (
     <>
-      <Perfil></Perfil>
-      <div>
-        <div className='crear-publi'>
-          <h1>Crear Publicacion</h1>
-          <hr></hr>
+      <h1 style={{ fontSize: '18pt', marginTop: '2em', marginBottom: '1em', textAlign: 'left', marginLeft: '3em' }}>Crear publicación</h1>
+      <hr style={{ width: '40%', marginLeft: '4em' }}></hr>
+      
+      <form className='editForm'>
+        <input type="text" name="name" placeholder='Nombre' />
+        <div style={{ width: '50%' }}>
+          <input type="text" name="price" placeholder='Precio $' />
+          <button style={{ margin: '1em', borderRadius: '16px', paddingRight: '2em', paddingLeft: '2em' }} type="button" class="btn btn-outline-dark">Subir foto</button>
         </div>
-        <form className='editForm'>
-          <input type="text" name="name" placeholder='Nombre' />
-          <div className='editForm1'>
-            <input className='input1' type="text" name="precio" placeholder='Precio' />
-            <input type="tel" name="telefono" placeholder='Subir foto' />
-          </div>
-          <textarea className='textarea' name="comentarios" rows="5" placeholder='Descripción'></textarea>
-          <input type="submit" value="Subir" />
-        </form>
-      </div>
-    </>
 
+
+        <FloatingLabel style={{ width: '50%', marginTop:'1em' }} controlId="floatingTextarea2" label="Descripción del producto">
+          <Form.Control
+            as="textarea"
+          />
+        </FloatingLabel>
+
+        <button style={{ margin: '1em', borderRadius: '16px', paddingRight: '3em', paddingLeft: '3em' }} type="button" class="btn btn-outline-dark">Publicar</button>
+
+      </form>
+    </>
   )
+
 }
 
 export default CrearP

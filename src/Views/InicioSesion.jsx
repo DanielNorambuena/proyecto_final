@@ -8,10 +8,11 @@ const InicioSesion = () => {
       <form className='editForm'>
         <input type="text" name="email" placeholder='Email' />
         <input type="password" name="password" placeholder='Contraseña' />
-        <input type="submit" value="Iniciar sesión" />
+        <button style={{ margin: '1em', borderRadius: '16px', paddingRight: '2em', paddingLeft: '2em' }} type="button" class="btn btn-outline-dark">Iniciar sesión</button>
       </form>
     </div>
   )
 }
+
 
 export default InicioSesion

@@ -1,8 +1,12 @@
-import React from 'react'
+import React from 'react';
+import Perfil from '../Components/Perfil';
+
 
 const MisPublicaciones = () => {
   return (
-    <div>MisPublicaciones</div>
+    <Perfil></Perfil>
+   
+   
   )
 }
 

@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import Perfil from '../Components/Perfil';
 
 const Favoritos = () => {
   return (
-    <div>Favoritos</div>
+    <Perfil></Perfil>
   )
 }
 

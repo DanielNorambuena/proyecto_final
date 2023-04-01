@@ -38,17 +38,46 @@ code {
   padding: 0.5em;
 }
 
-.editForm{
+.editForm {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 12rem auto;
 }
 
-.editForm input{
-border:1px solid rgb(139, 139, 139);
-border-radius: 14px;
-margin-bottom: 1em;
-padding: 0.5em;
-width: 50%;
+.editForm input {
+  border: 1px solid rgb(139, 139, 139);
+  border-radius: 14px;
+  margin-bottom: 1em;
+  padding: 0.5em;
+  width: 50%;
 }
+
+.imgIzquierda {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  width: 200px;
+}
+
+.imgFull {
+  display: flex;
+  flex-direction: row;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  height: 415px;
+  width: 415px;
+  margin-right: 2em;
+  margin-left: 1em;
+}
+
+.textoDescripcion{
+  margin-top: 3em;
+}
+
+.textoDescripcion p{
+  margin-top: 2em;
+  text-align: justify
+}
+

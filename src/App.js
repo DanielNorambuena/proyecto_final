@@ -8,6 +8,7 @@ import InicioSesion from './Views/InicioSesion.jsx'
 import Registro from './Views/Registro.jsx'
 import Favoritos from './Views/Favoritos.jsx'
 import Carrito from './Views/Carrito.jsx'
+import Descripcion from './Views/Descripcion.jsx'
 
 function App() {
   return (
@@ -22,6 +23,8 @@ function App() {
           <Route path='/Registro' element={<Registro></Registro>}></Route>
           <Route path='/Carrito' element={<Carrito></Carrito>}></Route>
           <Route path='/Favoritos' element={<Favoritos></Favoritos>}></Route>
+          <Route path='/Descripcion' element={<Descripcion></Descripcion>}></Route>
+
         </Routes>
         <Footer></Footer>
       </BrowserRouter>

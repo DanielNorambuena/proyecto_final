@@ -56,6 +56,35 @@ code {
   width: 50%;
 }
 
+.imgIzquierda {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  width: 200px;
+}
+
+.imgFull {
+  display: flex;
+  flex-direction: row;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  height: 415px;
+  width: 415px;
+  margin-right: 2em;
+  margin-left: 1em;
+}
+
+.textoDescripcion{
+  margin-top: 3em;
+}
+
+.textoDescripcion p{
+  margin-top: 2em;
+  text-align: justify
+}
+
+
  
 input[type=submit] {
   background-color: #385aa6;

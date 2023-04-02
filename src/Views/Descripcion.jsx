@@ -24,9 +24,9 @@ const Descripcion = () => {
           <div className='d-flex' style={{ height: '2.5em' }}>
             <button style={{ marginRight: '5px' }} type="button" class="btn btn-outline-dark">-</button>
             <p style={{ marginTop: '0.5em', marginLeft: '0.5em', marginRight: '0.5em' }}>5</p>
-            <button style={{ marginRight: '50px' }} type="button" class="btn btn-outline-dark"> +</button>
-            <button style={{ marginRight: '5px', borderRadius: '16px' }} type="button" class="btn btn-outline-dark">Agregar al carrito</button>
-
+            <button style={{ marginRight: '50px' }} type="button" class="btn btn-outline-dark">+</button>
+            <button style={{ marginRight: '15px', borderRadius: '16px' }} type="button" class="btn btn-outline-dark">Agregar al carrito</button>
+            <button style={{ borderRadius: '16px' }} type="button" class="btn btn-outline-dark"><i class="fa-solid fa-heart"></i></button>
           </div>
         </div>
       </Container>

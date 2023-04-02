@@ -175,3 +175,25 @@ hr {
   align-items: center;
 }
 
+header {
+  background-image: url("https://www.topsforshoes.com/ccms/default/assets/Image/main_banner_slider.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  margin-bottom: 100px;
+}
+
+header h1 {
+  font-size: 70px;
+}
+
+header p {
+  font-size: 20px;
+}

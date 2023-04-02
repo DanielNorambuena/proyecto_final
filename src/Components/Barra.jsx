@@ -19,7 +19,4 @@ const Barra = () => {
   )
 }
 
-
-
-
 export default Barra

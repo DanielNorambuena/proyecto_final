@@ -25,7 +25,7 @@ code {
   font-size: 11pt;
   display: flex;
   justify-content: end;
-  
+
 }
 
 .view {
@@ -75,11 +75,11 @@ code {
   margin-left: 1em;
 }
 
-.textoDescripcion{
+.textoDescripcion {
   margin-top: 3em;
 }
 
-.textoDescripcion p{
+.textoDescripcion p {
   margin-top: 2em;
   text-align: justify
 }
@@ -97,7 +97,7 @@ input[type=submit] {
 
 .editForm1 {
   display: flex;
-  flex-direction: row ;
+  flex-direction: row;
   width: 50%;
 }
 
@@ -130,12 +130,13 @@ hr {
 }
 
 .imgRedonda {
-  width:200px;
-  height:200px;
-  border-radius:160px;
-  border:4px solid #7f69ac;
+  width: 200px;
+  height: 200px;
+  border-radius: 160px;
+  border: 4px solid #556485;
   margin-right: 2rem;
 }
+
 .caja {
   display: flex;
   flex-direction: column;
@@ -154,5 +155,11 @@ hr {
   flex-direction: column;
   align-items: center;
   margin-top: 7%;
+}
+
+.crear-publi1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 

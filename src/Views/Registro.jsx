@@ -17,7 +17,8 @@ const Registro = () => {
           <input className='input1' type="password" name="text" placeholder='Contraseña' />
           <input type="password" name="text" placeholder='Repetir Contraseña' />
         </div>
-        <input type="submit" value="Guardar" />
+        <button style={{ margin: '1em', borderRadius: '16px', paddingRight: '2em', paddingLeft: '2em' }} type="button" 
+        variant="outline-primary" class="btn btn-outline-primary">Guardar</button>
 
         <hr></hr>
 

@@ -15,11 +15,11 @@ const Perfil = () => {
             <Navbar >
                 <Container  >
                     <Nav style={{ display: 'flex', justifyContent: 'flex-end' }}>
-                        <NavLink style={{ border: '2px solid', borderRadius: '14px', marginLeft: '1em', marginRight: '1.5em', padding: '10px 90px' }}
+                        <NavLink style={{ border: '2px solid', borderRadius: '14px', marginLeft: '1em', marginRight: '1.5em', padding: '10px 80px' }}
                             className={({ isActive }) => (isActive ? "viewActiva" : "view")} to="/CrearPublic">Crear Publicacion</NavLink>
-                        <NavLink style={{ border: '2px solid', borderRadius: '14px', marginLeft: '1em', marginRight: '1.5em', padding: '10px 90px' }}
+                        <NavLink style={{ border: '2px solid', borderRadius: '14px', marginLeft: '1em', marginRight: '1.5em', padding: '10px 80px' }}
                             className={({ isActive }) => (isActive ? "viewActiva" : "view")} to="/Favoritos">Favoritos</NavLink>
-                        <NavLink style={{ border: '2px solid', borderRadius: '14px', marginLeft: '1em', marginRight: '1.5em', padding: '10px 90px' }}
+                        <NavLink style={{ border: '2px solid', borderRadius: '14px', marginLeft: '1em', marginRight: '1.5em', padding: '10px 80px' }}
                             className={({ isActive }) => (isActive ? "viewActiva" : "view")} to="/MisPublicaciones">Mis Publicaciones</NavLink>
                     </Nav>
                 </Container>

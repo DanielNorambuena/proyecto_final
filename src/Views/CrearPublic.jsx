@@ -19,7 +19,8 @@ const CrearPublic = () => {
               <button style={{ margin: '1em', borderRadius: '16px', paddingRight: '2em', paddingLeft: '2em' }} type="button" >Subir foto</button>
             </div>
             <textarea className='textarea' name="comentarios" rows="5" placeholder='Descripción'></textarea>
-            <input type="submit" value="Subir" />
+            <button style={{ margin: '1em', borderRadius: '16px', paddingRight: '3em', paddingLeft: '3em' }} type="button" 
+        variant="outline-primary" class="btn btn-outline-primary">Subir</button>
 
           </form>
         </div>

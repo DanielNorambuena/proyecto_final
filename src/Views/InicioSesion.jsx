@@ -8,7 +8,8 @@ const InicioSesion = () => {
       <form className='editForm'>
         <input type="text" name="email" placeholder='Email' />
         <input type="password" name="password" placeholder='Contraseña' />
-        <button style={{ margin: '1em', borderRadius: '16px', paddingRight: '2em', paddingLeft: '2em' }} type="button" class="btn btn-outline-dark">Iniciar sesión</button>
+        <button style={{ margin: '1em', borderRadius: '16px', paddingRight: '2em', paddingLeft: '2em' }} type="button" 
+        variant="outline-primary" class="btn btn-outline-primary">Iniciar sesión</button>
       </form>
     </div>
   )

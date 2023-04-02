@@ -31,7 +31,6 @@ function App() {
           <Route path='/CrearPublic' element={<CrearPublic></CrearPublic>}></Route>
           <Route path='/MisPublicaciones' element={<MisPublicaciones></MisPublicaciones>}></Route>
           <Route path="*" element={<NotFound />} />
-
         </Routes>
         <Footer></Footer>
       </BrowserRouter>

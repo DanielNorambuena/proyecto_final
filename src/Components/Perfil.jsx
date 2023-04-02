@@ -1,4 +1,6 @@
 import React from 'react';
+import { Nav, Navbar, Container } from 'react-bootstrap'
+import { NavLink } from 'react-router-dom'
 
 const Perfil = () => {
     return (
@@ -10,11 +12,23 @@ const Perfil = () => {
                     <p>Editar Perfil</p>
                 </div>
             </div>
-            <div className='editForm3'>
-                <input type="button" value="Crear publicacion" />
-                <input type="button" value="Favoritos" />
-                <input type="button" value="Mis Plublicaciones" />
-            </div>
+            <Navbar >
+                <Container  >
+                    <Nav style={{ display: 'flex', justifyContent: 'flex-end' }}>
+                        <NavLink style={{ border: '2px solid', borderRadius: '14px', marginLeft: '1em', marginRight: '1.5em', padding: '10px 90px' }}
+                            className={({ isActive }) => (isActive ? "viewActiva" : "view")} to="/CrearPublic">Crear Publicacion</NavLink>
+                        <NavLink style={{ border: '2px solid', borderRadius: '14px', marginLeft: '1em', marginRight: '1.5em', padding: '10px 90px' }}
+                            className={({ isActive }) => (isActive ? "viewActiva" : "view")} to="/Favoritos">Favoritos</NavLink>
+                        <NavLink style={{ border: '2px solid', borderRadius: '14px', marginLeft: '1em', marginRight: '1.5em', padding: '10px 90px' }}
+                            className={({ isActive }) => (isActive ? "viewActiva" : "view")} to="/MisPublicaciones">Mis Publicaciones</NavLink>
+                    </Nav>
+                </Container>
+            </Navbar>
+
+
+
+
+
         </div>
     )
 }

@@ -11,6 +11,8 @@ import Carrito from './Views/Carrito.jsx';
 import Descripcion from './Views/Descripcion.jsx';
 import NotFound from './Views/NotFound.jsx';
 import CrearPublic from './Views/CrearPublic.jsx';
+import MisPublicaciones from './Views/MisPublicaciones.jsx';
+
 
 function App() {
   return (
@@ -27,6 +29,7 @@ function App() {
           <Route path='/Favoritos' element={<Favoritos></Favoritos>}></Route>
           <Route path='/Descripcion' element={<Descripcion></Descripcion>}></Route>
           <Route path='/CrearPublic' element={<CrearPublic></CrearPublic>}></Route>
+          <Route path='/MisPublicaciones' element={<MisPublicaciones></MisPublicaciones>}></Route>
           <Route path="*" element={<NotFound />} />
 
         </Routes>

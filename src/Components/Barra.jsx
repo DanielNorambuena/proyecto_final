@@ -7,7 +7,7 @@ const Barra = () => {
   return (
     <Navbar className='barra'>
       <Container >
-        <NavLink className={({ isActive }) => (isActive ? "viewActiva" : "view")} to="/"><img alt="mainLab" src={logo} style={{ width: '220px'}} /></NavLink>
+        <NavLink className={({ isActive }) => (isActive ? "viewActiva" : "view")} to="/"><img alt="logo" src={logo} style={{ width: '220px'}} /></NavLink>
         <Nav style={{ display: 'flex', justifyContent: 'flex-end' }}>
           <NavLink style={{ marginRight: '2em' }} className={({ isActive }) => (isActive ? "viewActiva" : "view")} to="/UltPublics">Catálogo de productos</NavLink>
           <NavLink className={({ isActive }) => (isActive ? "viewActiva" : "view")} to="/InicioSesion">Iniciar sesión</NavLink>

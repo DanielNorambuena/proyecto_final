@@ -14,6 +14,10 @@ const Home = () => {
 
       <Galeria></Galeria>
 
+      <div className='foto-home'>
+
+      </div>
+
 
 
     </>

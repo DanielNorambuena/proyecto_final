@@ -311,3 +311,19 @@ header p {
   background-color: #444444;
   transform: translateY(-50%);
 }
+
+
+.foto-home {
+  background-image: url("https://sneakerstudio.com/data/include/img/links/1675333243_rwd_desktop.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  margin: 70px;
+}

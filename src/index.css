@@ -25,7 +25,6 @@ code {
   font-size: 11pt;
   display: flex;
   justify-content: end;
-
 }
 
 .view {
@@ -35,7 +34,7 @@ code {
 }
 
 .viewActiva {
-  color: rgb(63, 63, 63);
+  color: #385aa6;
   text-decoration: none;
   padding: 0.5em;
 }
@@ -198,3 +197,4 @@ header h1 {
 header p {
   font-size: 20px;
 }
+

@@ -14,7 +14,7 @@ const MisPublicaciones = () => {
       </div>
 
 
-      <Container className='d-flex' style={{ justifyContent: 'center' }}>
+      <Container className='d-flex' style={{ justifyContent: 'center',  marginBottom:'3em'  }}>
         <Row md={3}>
 
           <Card style={{ width: '18rem', marginRight: '1em', }}>
@@ -57,7 +57,7 @@ const MisPublicaciones = () => {
               </div>
             </Card.Body>
           </Card>
-          <Card style={{ width: '18rem', marginRight: '1em', }}>
+          <Card style={{ width: '18rem', marginRight: '1em',}}>
             <Card.Img variant="top" className='publi-img' style={{ width: '90%', margin: '1em', borderRadius: '14px' }} src='https://ae01.alicdn.com/kf/S609b243f73564d4eb15377a58d1cff863/PMAWXS-Zapatillas-deportivas-transpirables-para-hombre-zapatos-blancos-ligeros-y-c-modos-para-caminar-zapatillas-de.jpg' />
             <Card.Body>
               <Card.Title className='let'><p style={{ fontSize: '15px' }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></Card.Title>

@@ -15,6 +15,7 @@ const Home = () => {
       <Galeria></Galeria>
 
 
+
     </>
   )
 }

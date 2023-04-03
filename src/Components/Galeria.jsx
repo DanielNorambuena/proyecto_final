@@ -7,7 +7,6 @@ const Galeria = () => {
         <div class="container">
           
           <div class="row">
-           
             <div class="col-md-6 col-lg-4 col-xl-3">
               <div id="product-1" class="single-product">
                 <div class="part-1">
@@ -51,7 +50,7 @@ const Galeria = () => {
             <div class="col-md-6 col-lg-4 col-xl-3">
               <div id="product-1" class="single-product">
                 <div class="part-1">
-               
+                <span class="new">Nuevo</span>
                   <ul>
                     <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
                     <li><a href="#"><i class="fas fa-heart"></i></a></li>

@@ -311,3 +311,33 @@ header p {
   background-color: #444444;
   transform: translateY(-50%);
 }
+
+/* fin css cards */
+
+.sort{
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 1em;
+}
+
+.blog{
+display: flex;
+justify-content: center;
+margin-bottom: 3em;
+}
+
+
+.publicidad{
+  background-image: url("https://okdiario.com/coolthelifestyle/img/2021/08/19/220877195_990101775084681_6015254614178452327_n-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+
+}

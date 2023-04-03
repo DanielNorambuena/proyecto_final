@@ -6,6 +6,7 @@ const Header = () => {
       <h1>¡Todo en Zapatillas!</h1>
       <p>Las mejores marcas las puedes encontrar aquí</p>
     </header>
+    
   )
 }
 

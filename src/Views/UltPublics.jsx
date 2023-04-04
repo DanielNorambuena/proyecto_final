@@ -13,10 +13,8 @@ const UltPublics = () => {
         </div>
 
         <div className='sort'>
-          <div>
-          <p style={{marginRight:'1em', marginLeft:'1em'}}>Ordenar por:</p>
-          </div>
-          <div>
+          <div className='d-flex'>
+          <p style={{marginRight:'1em', marginLeft:'1em', marginBottom:0}}>Ordenar por:</p>
           <select>
             <option value="Menor a mayor">Menor a mayor</option>
             <option value="Mayor a menor">Mayor a menor</option>
@@ -24,11 +22,13 @@ const UltPublics = () => {
             <option value="Mas antiguos primero">Mas antiguos primero</option>
           </select>
           </div>
+           
           
           <div>
-            <input style={{ borderRadius: '14px', border: 'none', padding: '5px', marginLeft:'24em' }} type="text" name="email" placeholder='Buscar en la tienda' />
+            <input style={{ borderRadius: '14px', border: 'none', padding: '5px' }} type="text" name="email" placeholder='Buscar en la tienda' />
             <button type="button" class="btn btn-light"><i class="fa-solid fa-magnifying-glass"></i></button>
           </div>
+
         </div>
       
 

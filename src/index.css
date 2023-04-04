@@ -342,40 +342,16 @@ header p {
 }
 
 
-
-
-
-
-
 .cart-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 10%;
+  padding: 5% 10%;
 }
 
 .cart-container img {
-  width: 10%;
+  width: 15%;
   border-radius: 14px;
 }
 
 .cart-subcontainer {
-  border: 2px solid #556485;
-  border-radius: 10px;
+
   padding: 5%;
-}
-
-.cart {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  align-items: center;
-  font-size: 1.5rem;
-}
-
-.cart button {
-  padding: 0.8rem;
-  border-radius: 15px;
-  cursor: pointer;
 }

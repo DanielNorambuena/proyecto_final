@@ -35,7 +35,7 @@ const Galeria = () => {
               <ul>
                 <li><a href="#"><i className="fas fa-shopping-cart"></i></a></li>
                 <li><a href="#"><i className="fas fa-heart"></i></a></li>
-                <li><a href="#"><i className="fas fa-plus"></i></a></li>
+                <li><a href="/Descripcion"><i className="fas fa-plus"></i></a></li>
               </ul>
               <img src='https://coliseumstorecl.vtexassets.com/arquivos/ids/677593-800-auto?v=637818206338030000&width=800&height=auto&aspect=true' style={{width:'270px', height:'300px'}}></img>
 
@@ -75,7 +75,7 @@ const Galeria = () => {
               <ul>
                 <li><a href="#"><i className="fas fa-shopping-cart"></i></a></li>
                 <li><a href="#"><i className="fas fa-heart"></i></a></li>
-                <li><a href="#"><i className="fas fa-plus"></i></a></li>
+                <li><a href="/Descripcion"><i className="fas fa-plus"></i></a></li>
               </ul>
               <img src='https://falabella.scene7.com/is/image/Falabella/15774133_3?wid=1500&hei=1500&qlt=70' id="imgrotate" style={{width:'300px'}}></img>
 

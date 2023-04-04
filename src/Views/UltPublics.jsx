@@ -25,9 +25,10 @@ const UltPublics = () => {
           </select>
           </div>
           
-          {/* <div>
-            <input style={{ borderRadius: '14px', border: 'none', padding: '5px', marginTop: '1em' }} type="text" name="email" placeholder='Buscar en la tienda' />
-          </div> */}
+          <div>
+            <input style={{ borderRadius: '14px', border: 'none', padding: '5px', marginLeft:'24em' }} type="text" name="email" placeholder='Buscar en la tienda' />
+            <button type="button" class="btn btn-light"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </div>
         </div>
       
 

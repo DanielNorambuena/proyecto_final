@@ -37,7 +37,7 @@ function App() {
           <Route path='/InicioSesion' element={<InicioSesion></InicioSesion>}></Route>
           <Route path='/Registro' element={<Registro></Registro>}></Route>
           <Route path='/Descripcion' element={<Descripcion></Descripcion>}></Route>
-          {usuario &&
+          {usuario.conectado &&
             <>
               <Route path='/Favoritos' element={<Favoritos></Favoritos>}></Route>
               <Route path='/CrearPublic' element={<CrearPublic></CrearPublic>}></Route>

@@ -20,7 +20,7 @@ const InicioSesion = () => {
       setUsuario({conectado: true, name: usuarioValido.name});
       navigate('/');
     } else {
-
+      
     }
   }
 

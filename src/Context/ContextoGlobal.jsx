@@ -9,9 +9,6 @@ export const ContextoGlobalProvider = (props) => {
     const [usuario, setUsuario] = useState({});
 
 
-
-
-
     const lstUsuarios = [
         {
             email: 'daniel@gmail.com',

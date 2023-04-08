@@ -29,6 +29,7 @@ const BarraPrivada = () => {
                     </NavDropdown>
 
                     <NavLink style={{ marginRight: '2em' }} className={({ isActive }) => (isActive ? "viewActiva" : "view")} to="/Carrito"><i class="fa-solid fa-cart-shopping"></i></NavLink>
+                    <NavLink style={{ marginRight: '2em' }} className={({ isActive }) => (isActive ? "viewActiva" : "view")} to="/Favoritos"><i class="fa-solid fa-heart"></i></NavLink>
                     <NavLink className={({ isActive }) => (isActive ? "viewActiva" : "view")} onClick={() => cerrarApp()}><i class="fa-solid fa-right-from-bracket"></i></NavLink>
                 </Nav>
             </Container>

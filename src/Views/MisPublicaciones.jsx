@@ -1,10 +1,25 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import Perfil from '../Components/Perfil';
-import { Row, Card, Container } from 'react-bootstrap';
-
+import ContextoGlobal from '../Context/ContextoGlobal';
+import { Row } from 'react-bootstrap';
 
 
 const MisPublicaciones = () => {
+
+  const { lstProductos, setLstProductos } = useContext(ContextoGlobal);
+
+  const cargarDatos = async () => {
+    const res = await fetch('http://localhost:3000/zapatillas.json');
+    const data = await res.json();
+
+    setLstProductos([...data]);
+  }
+
+  useEffect(() => {
+    cargarDatos();
+  }, [])
+
+
   return (
     <>
       <Perfil></Perfil>
@@ -13,82 +28,37 @@ const MisPublicaciones = () => {
         <hr></hr>
       </div>
 
+      <section className="section-products">
+        <div className="container">
+          <Row>
+            {
+              lstProductos.map((producto) => {
+                return (
+                  <div className="col-md-6 col-lg-4 col-xl-3">
+                    <div  className="single-product">
+                      <div  className="single-product">
+                        <div className="part-1">
+                          <ul>
+                            <li><a href="#"><i class="fa-solid fa-pen-to-square"></i></a></li>
+                            <li><a href="#"><i class="fa-solid fa-trash"></i></a></li>
+                          </ul>
 
-      <Container className='d-flex' style={{ justifyContent: 'center',  marginBottom:'3em'  }}>
-        <Row md={3}>
-
-          <Card style={{ width: '18rem', marginRight: '1em', }}>
-            <Card.Img variant="top" className='publi-img' style={{ width: '90%', margin: '1em', borderRadius: '14px' }} src='https://ae01.alicdn.com/kf/S609b243f73564d4eb15377a58d1cff863/PMAWXS-Zapatillas-deportivas-transpirables-para-hombre-zapatos-blancos-ligeros-y-c-modos-para-caminar-zapatillas-de.jpg' />
-            <Card.Body>
-              <Card.Title className='let'><p style={{ fontSize: '15px' }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></Card.Title>
-              <div>
-                <hr />
-              </div>
-              <div style={{ textAlign: 'center' }}>
-                <div>
-                  <h4 style={{ marginTop: '1em' }}>$0.000</h4>
-                </div>
-                <div >
-                  <button style={{ marginTop: '1em', borderRadius: '16px', paddingRight: '2em', paddingLeft: '2em' }} type="button"
-                    class="btn btn-outline-dark">Editar publicacion</button>
-                  <button style={{ marginTop: '1em', borderRadius: '16px', paddingRight: '2em', paddingLeft: '2em' }} type="button"
-                    variant="outline-primary" class="btn btn-outline-danger">Eliminar publicacion</button>
-                </div>
-              </div>
-            </Card.Body>
-          </Card>
-          <Card style={{ width: '18rem', marginRight: '1em', }}>
-            <Card.Img variant="top" className='publi-img' style={{ width: '90%', margin: '1em', borderRadius: '14px' }} src='https://ae01.alicdn.com/kf/S609b243f73564d4eb15377a58d1cff863/PMAWXS-Zapatillas-deportivas-transpirables-para-hombre-zapatos-blancos-ligeros-y-c-modos-para-caminar-zapatillas-de.jpg' />
-            <Card.Body>
-              <Card.Title className='let'><p style={{ fontSize: '15px' }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></Card.Title>
-              <div>
-                <hr />
-              </div>
-              <div style={{ textAlign: 'center' }}>
-                <div>
-                  <h4 style={{ marginTop: '1em' }}>$0.000</h4>
-                </div>
-                <div >
-                  <button style={{ marginTop: '1em', borderRadius: '16px', paddingRight: '2em', paddingLeft: '2em' }} type="button"
-                    class="btn btn-outline-dark">Editar publicacion</button>
-                  <button style={{ marginTop: '1em', borderRadius: '16px', paddingRight: '2em', paddingLeft: '2em' }} type="button"
-                    variant="outline-primary" class="btn btn-outline-danger">Eliminar publicacion</button>
-                </div>
-              </div>
-            </Card.Body>
-          </Card>
-          <Card style={{ width: '18rem', marginRight: '1em',}}>
-            <Card.Img variant="top" className='publi-img' style={{ width: '90%', margin: '1em', borderRadius: '14px' }} src='https://ae01.alicdn.com/kf/S609b243f73564d4eb15377a58d1cff863/PMAWXS-Zapatillas-deportivas-transpirables-para-hombre-zapatos-blancos-ligeros-y-c-modos-para-caminar-zapatillas-de.jpg' />
-            <Card.Body>
-              <Card.Title className='let'><p style={{ fontSize: '15px' }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></Card.Title>
-              <div>
-                <hr />
-              </div>
-              <div style={{ textAlign: 'center' }}>
-                <div>
-                  <h4 style={{ marginTop: '1em' }}>$0.000</h4>
-                </div>
-                <div >
-                  <button style={{ marginTop: '1em', borderRadius: '16px', paddingRight: '2em', paddingLeft: '2em' }} type="button"
-                    class="btn btn-outline-dark">Editar publicacion</button>
-                  <button style={{ marginTop: '1em', borderRadius: '16px', paddingRight: '2em', paddingLeft: '2em' }} type="button"
-                    variant="outline-primary" class="btn btn-outline-danger">Eliminar publicacion</button>
-                </div>
-              </div>
-            </Card.Body>
-          </Card>
-
-
-        </Row>
-      </Container>
-
-
-
-
-
-
-
-
+                          <img src={producto.img} style={{ width: '270px', height: '300px' }}></img>
+                        </div>
+                        <div className="part-2">
+                          <h3 className="product-title">{producto.nombre}</h3>
+                          <h4 className="product-old-price">${producto.precioanterior}</h4>
+                          <h4 className="product-price">${producto.precio}</h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )
+              })
+            }
+          </Row>
+        </div>
+      </section>
     </>
   )
 }

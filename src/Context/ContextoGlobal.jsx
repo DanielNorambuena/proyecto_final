@@ -3,10 +3,8 @@ import { createContext, useState } from "react";
 export const ContextoGlobal = createContext({});
 
 export const ContextoGlobalProvider = (props) => {
-
-
-
     const [usuario, setUsuario] = useState({});
+    const [lstProductos, setLstProductos] = useState([]);
 
 
     const lstUsuarios = [
@@ -22,8 +20,10 @@ export const ContextoGlobalProvider = (props) => {
         },
     ];
 
+
+
     return (
-        <ContextoGlobal.Provider value={{ lstUsuarios, setUsuario, usuario }}>
+        <ContextoGlobal.Provider value={{ lstUsuarios, setUsuario, usuario, lstProductos, setLstProductos }}>
             {props.children}
         </ContextoGlobal.Provider>
     )

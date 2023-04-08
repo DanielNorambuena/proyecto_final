@@ -356,3 +356,8 @@ header p {
 
   padding: 5%;
 }
+
+.barra-privada {
+  color: rgb(146, 146, 146);
+  text-decoration: none;
+}

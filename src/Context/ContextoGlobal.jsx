@@ -6,7 +6,7 @@ export const ContextoGlobalProvider = (props) => {
 
 
 
-    const [conectado, setConectado] = useState(false);
+    const [usuario, setUsuario] = useState({});
 
 
 
@@ -26,7 +26,7 @@ export const ContextoGlobalProvider = (props) => {
     ];
 
     return (
-        <ContextoGlobal.Provider value={{ lstUsuarios, setConectado, conectado }}>
+        <ContextoGlobal.Provider value={{ lstUsuarios, setUsuario, usuario }}>
             {props.children}
         </ContextoGlobal.Provider>
     )

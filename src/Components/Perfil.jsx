@@ -1,14 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react'
 import { Nav, Navbar, Container } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
+import ContextoGlobal from '../Context/ContextoGlobal';
 
 const Perfil = () => {
+
+    const { usuario } = useContext(ContextoGlobal);
+
+
+
     return (
         <div className='caja'>
             <div className='perfil-contenedor'>
                 <img className='imgRedonda' src='https://lapi.com.mx/web/image/product.product/33844/image_1024/Paquete%20Perfil%20Mujer%20MID%20%28M%C3%A9rida%20Altabrisa%29?unique=8a485fd'></img>
                 <div>
-                    <h3>Hola: Myriam</h3>
+                    <h3>Hola: {usuario.name}</h3>
                     <p>Editar Perfil</p>
                 </div>
             </div>

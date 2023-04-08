@@ -8,7 +8,7 @@ const InicioSesion = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const { lstUsuarios, setConectado } = useContext(ContextoGlobal);
+  const { lstUsuarios, setUsuario } = useContext(ContextoGlobal);
   const navigate = useNavigate();
 
 
@@ -17,10 +17,10 @@ const InicioSesion = () => {
 
    
     if (usuarioValido) {
-      setConectado(true);
+      setUsuario({conectado: true, name: usuarioValido.name});
       navigate('/');
     } else {
-      setConectado(false);
+
     }
   }
 

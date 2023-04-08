@@ -361,3 +361,16 @@ header p {
   color: rgb(146, 146, 146);
   text-decoration: none;
 }
+
+.button-menu {
+  color: #385aa6;
+  text-decoration: none;
+  padding: 0.5em;
+}
+
+.button-menu button {
+  color: #385aa6;
+  text-decoration: none;
+  padding: 0.5em;
+  border: 0;
+}

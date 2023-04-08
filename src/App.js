@@ -13,47 +13,42 @@ import NotFound from './Views/NotFound.jsx';
 import CrearPublic from './Views/CrearPublic.jsx';
 import MisPublicaciones from './Views/MisPublicaciones.jsx';
 import BarraPrivada from './Components/BarraPrivada.jsx';
-import ContextoGlobal, { ContextoGlobalProvider } from './Context/ContextoGlobal.jsx';
+import ContextoGlobal from './Context/ContextoGlobal.jsx';
 import { useContext } from 'react';
 
 
 
 function App() {
 
-  const { conectado } = useContext(ContextoGlobal);
-
-
-
+  const { usuario } = useContext(ContextoGlobal);
 
 
   return (
 
     <>
-      <ContextoGlobalProvider>
+      <BrowserRouter>
 
+        {usuario.conectado && <BarraPrivada />}
+        <Barra />
 
-        <BrowserRouter>
-
-          <BarraPrivada />
-          <Barra />
-
-          <Routes>
-            <Route path='/' element={<Home></Home>}></Route>
-            <Route path='/UltPublics' element={<UltPublics></UltPublics>}></Route>
-            <Route path='/InicioSesion' element={<InicioSesion></InicioSesion>}></Route>
-            <Route path='/Registro' element={<Registro></Registro>}></Route>
-            <Route path='/Carrito' element={<Carrito></Carrito>}></Route>
-            <Route path='/Favoritos' element={<Favoritos></Favoritos>}></Route>
-            <Route path='/Descripcion' element={<Descripcion></Descripcion>}></Route>
-            <Route path='/CrearPublic' element={<CrearPublic></CrearPublic>}></Route>
-            <Route path='/MisPublicaciones' element={<MisPublicaciones></MisPublicaciones>}></Route>
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-          <Footer></Footer>
-        </BrowserRouter>
-
-      </ContextoGlobalProvider>
-
+        <Routes>
+          <Route path='/' element={<Home></Home>}></Route>
+          <Route path='/UltPublics' element={<UltPublics></UltPublics>}></Route>
+          <Route path='/InicioSesion' element={<InicioSesion></InicioSesion>}></Route>
+          <Route path='/Registro' element={<Registro></Registro>}></Route>
+          <Route path='/Descripcion' element={<Descripcion></Descripcion>}></Route>
+          {usuario &&
+            <>
+              <Route path='/Favoritos' element={<Favoritos></Favoritos>}></Route>
+              <Route path='/CrearPublic' element={<CrearPublic></CrearPublic>}></Route>
+              <Route path='/MisPublicaciones' element={<MisPublicaciones></MisPublicaciones>}></Route>
+              <Route path='/Carrito' element={<Carrito></Carrito>}></Route>
+            </>
+          }
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+        <Footer></Footer>
+      </BrowserRouter>
     </>
   );
 }

@@ -1,34 +1,37 @@
 import React, { useContext } from 'react';
+import { useParams } from 'react-router-dom';
+import ContextoGlobal from '../Context/ContextoGlobal';
 import { Container } from 'react-bootstrap';
 import Header from '../Components/Header';
 import GaleriaComplementa from '../Components/GaleriaComplementa';
-import { useParams } from 'react-router-dom';
-import ContextoGlobal from '../Context/ContextoGlobal';
 
 const Descripcion = () => {
   const { id } = useParams();
   const { zapatillas } = useContext(ContextoGlobal);
+  
+  const idZapatilla = zapatillas.findIndex((p) => p.id === id);
+  const zapDetalle = zapatillas[idZapatilla];
 
-  const idxZapatilla = zapatillas.findIndex((p) => p.id === id);
-  const zapDetalle = zapatillas[idxZapatilla];
+  //const zapDetalle = zapatillas.filter((p) => p.id === id);
+
 
   return (
     <>
       <Header></Header>
       <Container className='d-flex' >
         <div className='imgIzquierda'>
-          <img style={{ marginBottom: '1em', borderRadius: '14px' }} src="{zapDetalle.imgsec}"></img>
-          <img style={{ borderRadius: '14px' }} src={zapDetalle.imgter}></img>
+          <img style={{ marginBottom: '1em', borderRadius: '14px' }} src=""></img>
+          <img style={{ borderRadius: '14px' }} src=""></img>
         </div>
 
         <div className='imgFull'>
-          <img style={{ borderRadius: '14px' }} src={zapDetalle.img}></img>
+          <img style={{ borderRadius: '14px' }} src=""></img>
         </div>
 
         <div className='textoDescripcion'>
           <h3>{zapDetalle.nombre}</h3>
-          <p>{zapDetalle.desc}</p>
-          <h4 style={{ marginBottom: '1.5em' }}>${zapDetalle.precio}</h4>
+          <p>d</p>
+          <h4 style={{ marginBottom: '1.5em' }}>$d</h4>
 
           <div className='d-flex' style={{ height: '2.5em' }}>
             <button style={{ marginRight: '5px' }} type="button" class="btn btn-outline-dark">-</button>

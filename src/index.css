@@ -202,21 +202,6 @@ header p {
   padding: 50px 0 0;
 }
 
-.section-products .header {
-  margin-bottom: 50px;
-}
-
-.section-products .header h3 {
-  font-size: 1rem;
-  color: #0d6efd;
-  font-weight: 500;
-}
-
-.section-products .header h2 {
-  font-size: 2.2rem;
-  font-weight: 400;
-  color: #444444;
-}
 
 .section-products .single-product {
   margin-bottom: 26px;
@@ -226,7 +211,6 @@ header p {
   position: relative;
   height: 290px;
   max-height: 290px;
-  margin-bottom: 20px;
   overflow: hidden;
 }
 
@@ -260,7 +244,7 @@ header p {
 }
 
 .section-products .single-product:hover .part-1 ul {
-  bottom: 30px;
+  bottom: 50px;
   opacity: 1;
 }
 
@@ -282,7 +266,7 @@ header p {
 }
 
 .section-products .single-product .part-1 ul li a:hover {
-  color: #fe302f;
+  color: #567bc4;
 }
 
 .section-products .single-product .part-2 .product-title {

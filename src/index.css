@@ -199,7 +199,7 @@ header p {
 
 /* css de galeria */
 .section-products {
-  padding: 60px 0 54px;
+  padding: 50px 0 0;
 }
 
 .section-products .header {
@@ -328,8 +328,23 @@ header p {
 }
 
 
+.banner {
+  background-image: url("Img/banner.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  margin-top: 5em;
+}
+
 .publicidad {
-  background-image: url("https://okdiario.com/coolthelifestyle/img/2021/08/19/220877195_990101775084681_6015254614178452327_n-1.jpg");
+  background-image: url("https://www.paris.cl/on/demandware.static/-/Sites/es_CL/dw0c086768/marketing/imagenes/zapatillas/banner_zapatillas_larga-vida_mar22.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -340,6 +355,8 @@ header p {
   align-items: center;
   text-align: center;
   color: white;
+  margin-top: 5em;
+  margin-bottom: 2em;
 }
 
 

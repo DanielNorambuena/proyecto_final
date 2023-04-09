@@ -16,10 +16,12 @@ const CrearPublic = () => {
 
   const navigate = useNavigate();
 
+
   const publicarProducto = () => {
     setLstProductos([...lstProductos, { nombre: nombre, precio: precio, precioanterior: precioanterior, img: img, desc: desc }]);
     navigate('/MisPublicaciones');
   }
+
 
 
   return (

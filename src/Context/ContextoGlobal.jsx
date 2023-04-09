@@ -15,10 +15,12 @@ export const ContextoGlobalProvider = (props) => {
         },
         {
             email: 'daniela@gmail.com',
-            clave: '1234',
+            clave: '123',
             name: 'Daniela',
         },
     ];
+
+
 
 
 

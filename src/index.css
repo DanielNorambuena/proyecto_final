@@ -289,6 +289,8 @@ header p {
   font-size: 1rem;
 }
 
+
+
 .section-products .single-product .part-2 h4 {
   display: inline-block;
   font-size: 1rem;
@@ -316,7 +318,7 @@ header p {
 
 .sort {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
   margin-top: 1em;
 }

@@ -1,5 +1,4 @@
 import Barra from './Components/Barra.jsx';
-import { useEffect, useState } from 'react';
 import Footer from './Components/Footer.jsx'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';

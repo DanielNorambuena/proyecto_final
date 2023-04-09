@@ -1,10 +1,11 @@
 import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 
+
 const CardZapatillas = ({ zapatilla }) => {
 
   const navigate = useNavigate();
-
+  
   const verDetalle = () => {
     navigate(`/Descripcion/${zapatilla.id}`)
   }

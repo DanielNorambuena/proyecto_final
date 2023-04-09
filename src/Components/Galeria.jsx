@@ -8,13 +8,17 @@ const Galeria = () => {
 
   return (
     <>
-      <Row className='mx-5'>
-        {
-          zapatillas.map((zapatilla) => {
-            return <Col key={zapatilla.id}><CardZapatillas zapatilla={zapatilla}></CardZapatillas></Col>
-          })
-        }
-      </Row>
+      <section className="section-products">
+        <div className="container">
+          <Row className='mx-5'>
+            {
+              zapatillas.map((zapatilla) => {
+                return <Col key={zapatilla.id}><CardZapatillas zapatilla={zapatilla}></CardZapatillas></Col>
+              })
+            }
+          </Row>
+        </div>
+      </section>
     </>
   )
 }

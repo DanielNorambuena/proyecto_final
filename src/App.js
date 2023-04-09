@@ -28,8 +28,14 @@ function App() {
     <>
       <BrowserRouter>
 
-        {usuario.conectado && <BarraPrivada />}
-        <Barra />
+
+
+      {usuario.conectado  === true ? (
+        <BarraPrivada />
+      ) : (
+        <Barra /> 
+      )}
+
 
         <Routes>
           <Route path='/' element={<Home></Home>}></Route>

@@ -12,7 +12,7 @@ const Perfil = () => {
     return (
         <div className='caja'>
             <div className='perfil-contenedor'>
-                <img className='imgRedonda' src='https://lapi.com.mx/web/image/product.product/33844/image_1024/Paquete%20Perfil%20Mujer%20MID%20%28M%C3%A9rida%20Altabrisa%29?unique=8a485fd'></img>
+                <img className='imgRedonda' src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png'></img>
                 <div>
                     <h3>Hola: {usuario.name}</h3>
                     <p>Editar Perfil</p>

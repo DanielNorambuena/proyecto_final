@@ -19,7 +19,7 @@ const UltPublics = () => {
             <option value="Menor a mayor">Menor a mayor</option>
             <option value="Mayor a menor">Mayor a menor</option>
             <option selected value="Mas recientes primero">Mas recientes primero</option>
-            <option value="Mas antiguos primero">Mas antiguos primero</option>
+            <option value="Mas antiguos primero">Mas antiguo primero</option>
           </select>
           </div>
            

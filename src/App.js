@@ -1,4 +1,5 @@
 import Barra from './Components/Barra.jsx';
+import { useEffect, useState } from 'react';
 import Footer from './Components/Footer.jsx'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -20,29 +21,24 @@ import { useContext } from 'react';
 
 function App() {
 
-  const { usuario } = useContext(ContextoGlobal);
-
+  const { usuario, } = useContext(ContextoGlobal);
 
   return (
-
     <>
       <BrowserRouter>
 
-
-
-      {usuario.conectado  === true ? (
-        <BarraPrivada />
-      ) : (
-        <Barra /> 
-      )}
-
+        {usuario.conectado === true ? (
+          <BarraPrivada />
+        ) : (
+          <Barra />
+        )}
 
         <Routes>
           <Route path='/' element={<Home></Home>}></Route>
           <Route path='/UltPublics' element={<UltPublics></UltPublics>}></Route>
           <Route path='/InicioSesion' element={<InicioSesion></InicioSesion>}></Route>
           <Route path='/Registro' element={<Registro></Registro>}></Route>
-          <Route path='/Descripcion' element={<Descripcion></Descripcion>}></Route>
+          <Route path='/Descripcion/:id' element={<Descripcion></Descripcion>}></Route>
           {usuario.conectado &&
             <>
               <Route path='/Favoritos' element={<Favoritos></Favoritos>}></Route>

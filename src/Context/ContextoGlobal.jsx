@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 export const ContextoGlobal = createContext({});
 
@@ -20,12 +20,21 @@ export const ContextoGlobalProvider = (props) => {
         },
     ];
 
+    const [zapatillas, setZapatillas] = useState([]);
 
+    //Llamado a la API
+    const getZapatillas = async () => {
+        const res = await fetch(`http://localhost:3000/sneakers.json`);
+        const data = await res.json();
+        setZapatillas(data);
+    }
 
-
+    useEffect(() => {
+        getZapatillas();
+    }, []);
 
     return (
-        <ContextoGlobal.Provider value={{ lstUsuarios, setUsuario, usuario, lstProductos, setLstProductos }}>
+        <ContextoGlobal.Provider value={{ lstUsuarios, setUsuario, usuario, lstProductos, setLstProductos, zapatillas, setZapatillas }}>
             {props.children}
         </ContextoGlobal.Provider>
     )

@@ -11,25 +11,24 @@ const Descripcion = () => {
   
   const idZapatilla = zapatillas.findIndex((p) => p.id === id);
   const zapDetalle = zapatillas[idZapatilla];
-  console.log(zapDetalle);
 
   return (
     <>
       <Header></Header>
       <Container className='d-flex' >
         <div className='imgIzquierda'>
-          <img style={{ marginBottom: '1em', borderRadius: '14px' }} src={zapDetalle.img}></img>
-          <img style={{ borderRadius: '14px' }} src=""></img>
+          <img style={{ marginBottom: '1em', borderRadius: '14px' }} src={zapDetalle.imgsec}></img>
+          <img style={{ borderRadius: '14px' }} src={zapDetalle.imgter}></img>
         </div>
 
         <div className='imgFull'>
-          <img style={{ borderRadius: '14px' }} src=""></img>
+          <img style={{ borderRadius: '14px' }} src={zapDetalle.img}></img>
         </div>
 
         <div className='textoDescripcion'>
-          <h3></h3>
-          <p>d</p>
-          <h4 style={{ marginBottom: '1.5em' }}>$d</h4>
+          <h3>{zapDetalle.nombre}</h3>
+          <p>{zapDetalle.desc}</p>
+          <h4 style={{ marginBottom: '1.5em' }}>${zapDetalle.precio}</h4>
 
           <div className='d-flex' style={{ height: '2.5em' }}>
             <button style={{ marginRight: '5px' }} type="button" class="btn btn-outline-dark">-</button>

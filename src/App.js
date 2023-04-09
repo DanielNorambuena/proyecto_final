@@ -26,7 +26,7 @@ function App() {
     const data = await res.json();
     setZapatillas(data);
   }
-  
+
   useEffect(() => {
     getZapatillas();
   }, []);
@@ -34,7 +34,7 @@ function App() {
 
   return (
     <div className='App'>
-      <ContextoGlobal.Provider value={{zapatillas,}}>
+      <ContextoGlobal.Provider value={{ zapatillas, }}>
         <BrowserRouter>
           <Barra></Barra>
           <Routes>
@@ -47,7 +47,7 @@ function App() {
             <Route path='/Descripcion/:id' element={<Descripcion></Descripcion>}></Route>
             <Route path='/CrearPublic' element={<CrearPublic></CrearPublic>}></Route>
             <Route path='/MisPublicaciones' element={<MisPublicaciones></MisPublicaciones>}></Route>
-            <Route path="*" element={<NotFound/>} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer></Footer>
         </BrowserRouter>

@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
+import ContextoGlobal from '../Context/ContextoGlobal';
 
 const CardZapatillas = ({ zapatilla }) => {
 
   const navigate = useNavigate();
-
+  
   const verDetalle = () => {
     navigate(`/Descripcion/${zapatilla.id}`)
   }

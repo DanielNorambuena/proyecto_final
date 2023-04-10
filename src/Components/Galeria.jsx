@@ -4,6 +4,7 @@ import CardZapatillas from './CardZapatillas.jsx';
 import { Row, Col } from 'react-bootstrap'
 
 const Galeria = () => {
+  
   const { zapatillas } = useContext(ContextoGlobal);
 
   return (

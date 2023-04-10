@@ -6,6 +6,7 @@ import banner from '../Img/banner.jpg'
 
 const Home = () => {
   return (
+    
     <>
       <Header></Header>
       <Galeria></Galeria>

@@ -1,18 +1,25 @@
 import React, { useContext } from 'react';
 import ContextoGlobal from '../Context/ContextoGlobal';
+import { calculaTotalPedido } from '../utils/utils';
+import { NavLink } from 'react-router-dom';
 
 const Carrito = () => {
 
-  const { zapatillasPedidas, totalPedido, setZapatillasPedidas } = useContext(ContextoGlobal);
+  const { zapatillasPedidas, totalPedido, setZapatillasPedidas, setTotalPedido } = useContext(ContextoGlobal);
 
   const disminuirCantidad = (id) => {
     const idx = zapatillasPedidas.findIndex((p) => p.id === id);
 
     if (idx > -1) {
-      zapatillasPedidas[idx].cant -= 1;
+      if (zapatillasPedidas[idx].cant > 0) {
+        zapatillasPedidas[idx].cant -= 1;
+        if (zapatillasPedidas[idx].cant === 0) {
+          zapatillasPedidas.splice(idx, 1);
+        }
+      }
       setZapatillasPedidas([...zapatillasPedidas]);
     }
-
+    setTotalPedido(calculaTotalPedido(zapatillasPedidas));
   }
 
   const aumentarCantidad = (id) => {
@@ -22,7 +29,7 @@ const Carrito = () => {
       zapatillasPedidas[idx].cant += 1;
       setZapatillasPedidas([...zapatillasPedidas]);
     }
-
+    setTotalPedido(calculaTotalPedido(zapatillasPedidas));
   }
 
 
@@ -50,7 +57,10 @@ const Carrito = () => {
                         alt={p.nombre}
                         src={p.img}
                         width='50' />
-                      <h6 className='mb-0 text-capitalize px-5'>{p.nombre}</h6>
+                      <NavLink
+                        style={{ textDecoration: 'none', paddingLeft: '25px', color: '#556485' }}
+                        to={`/descripcion/${p.id}`}>{p.nombre}
+                        </NavLink>
                     </div>
                     <div className='d-flex w-50 justify-content-between align-items-center'>
                       <h6 className='mb-0 p-2 w-50'>${p.precio * p.cant}</h6>
@@ -59,14 +69,14 @@ const Carrito = () => {
                           style={{ margin: '1em', borderRadius: '16px', paddingRight: '1em', paddingLeft: '1em' }}
                           type="button"
                           variant="outline-primary"
-                          class="btn btn-outline-primary"
+                          className="btn btn-outline-primary"
                           onClick={() => disminuirCantidad(p.id)}> - </button>
                         <strong className='px-3' >{p.cant}</strong>
                         <button
                           style={{ margin: '1em', borderRadius: '16px', paddingRight: '1em', paddingLeft: '1em' }}
                           type="button"
                           variant="outline-primary"
-                          class="btn btn-outline-primary"
+                          className="btn btn-outline-primary"
                           onClick={() => aumentarCantidad(p.id)}> + </button>
                       </div>
                     </div>
@@ -76,7 +86,7 @@ const Carrito = () => {
             }
 
             <hr />
-            <div className='fs-5' >Total Pedido:<strong className='px-3'>{totalPedido}</strong></div>
+            <div className='fs-5' >Total Pedido:<strong className='px-3'>{totalPedido.toLocaleString('es-CL', { style: 'currency', currency: 'CLP' })}</strong></div>
           </div>
         </div>
       </div>

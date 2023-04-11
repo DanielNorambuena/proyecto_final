@@ -51,7 +51,7 @@ const Registro = () => {
         <button style={{ margin: '1em', borderRadius: '16px', paddingRight: '2em', paddingLeft: '2em' }}
           type="button"
           variant="outline-primary"
-          class="btn btn-outline-primary"
+          className="btn btn-outline-primary"
           onClick={() => registrarUsuario()}
         >Guardar</button>
 

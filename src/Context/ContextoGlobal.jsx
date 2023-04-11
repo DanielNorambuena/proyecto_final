@@ -1,4 +1,5 @@
 import { createContext, useEffect, useState } from "react";
+import { calculaTotalPedido } from '../utils/utils';
 
 export const ContextoGlobal = createContext({});
 
@@ -53,9 +54,50 @@ export const ContextoGlobalProvider = (props) => {
         )
     }
 
+    //agregar zapatilla al carrito
+    const agregarZapatilla = (zapatilla) => {
+        const idx = zapatillasPedidas.findIndex((p) => p.id === zapatilla.id);
+
+        if (idx > -1) {
+            zapatillasPedidas[idx].cant += 1;
+            setZapatillasPedidas([...zapatillasPedidas]);
+        } else {
+            const zapatillasSeleccionada = {
+                id: zapatilla.id,
+                nombre: zapatilla.nombre,
+                precio: zapatilla.precio,
+                img: zapatilla.img,
+                cant: 1,
+            };
+            setZapatillasPedidas([...zapatillasPedidas, zapatillasSeleccionada]);
+        }
+
+        setTotalPedido(calculaTotalPedido(zapatillasPedidas));
+    };
+
+
+
     return (
 
-        <ContextoGlobal.Provider value={{ lstUsuarios, setUsuario, usuario, lstProductos, setLstProductos, zapatillas, setZapatillas, buscar, setBuscar, searcher, resultado, totalPedido, setTotalPedido, zapatillasPedidas, setZapatillasPedidas  }}>
+        <ContextoGlobal.Provider value={{
+            lstUsuarios,
+            setUsuario,
+            usuario,
+            lstProductos,
+            setLstProductos,
+            zapatillas,
+            setZapatillas,
+            buscar,
+            setBuscar,
+            searcher,
+            resultado,
+            totalPedido,
+            setTotalPedido,
+            zapatillasPedidas,
+            setZapatillasPedidas,
+            agregarZapatilla,
+            calculaTotalPedido,
+        }}>
             {props.children}
         </ContextoGlobal.Provider>
     )

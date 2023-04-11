@@ -7,7 +7,7 @@ import GaleriaComplementa from '../Components/GaleriaComplementa';
 
 const Descripcion = () => {
   const { id } = useParams();
-  const { zapatillas } = useContext(ContextoGlobal);
+  const { zapatillas, agregarZapatilla } = useContext(ContextoGlobal);
 
   const idZapatilla = zapatillas.findIndex((p) => p.id === id);
   const zapDetalle = zapatillas[idZapatilla];
@@ -15,7 +15,7 @@ const Descripcion = () => {
   return (
 
     <>
-    <Header></Header>
+      <Header></Header>
       <Container className='d-flex' >
         <div className='imgIzquierda'>
           <img style={{ marginBottom: '1em', borderRadius: '14px' }} src={zapDetalle?.imgsec}></img>
@@ -32,11 +32,12 @@ const Descripcion = () => {
           <h4 style={{ marginBottom: '1.5em' }}>${zapDetalle?.precio}</h4>
 
           <div className='d-flex' style={{ height: '2.5em' }}>
-            <button style={{ marginRight: '5px' }} type="button" class="btn btn-outline-dark">-</button>
-            <p style={{ marginTop: '0.5em', marginLeft: '0.5em', marginRight: '0.5em' }}>5</p>
-            <button style={{ marginRight: '50px' }} type="button" class="btn btn-outline-dark">+</button>
-            <button style={{ marginRight: '15px', borderRadius: '16px' }} type="button" class="btn btn-outline-dark">Agregar al carrito</button>
-            <button style={{ borderRadius: '16px' }} type="button" class="btn btn-outline-dark"><i class="fa-solid fa-heart"></i></button>
+            <button
+              style={{ marginRight: '15px', borderRadius: '16px' }}
+              type="button"
+              className="btn btn-outline-dark"
+              onClick={() => agregarZapatilla(zapDetalle)}>Agregar al carrito</button>
+            <button style={{ borderRadius: '16px' }} type="button" className="btn btn-outline-dark"><i className="fa-solid fa-heart"></i></button>
           </div>
         </div>
       </Container>

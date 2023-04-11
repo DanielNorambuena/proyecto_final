@@ -28,8 +28,8 @@ const MisPublicaciones = () => {
                       <div className="single-product">
                         <div className="part-1">
                           <ul>
-                            <li><a href="#"><i class="fa-solid fa-pen-to-square"></i></a></li>
-                            <li><a href="#"><i class="fa-solid fa-trash"></i></a></li>
+                            <li><a href="#"><i className="fa-solid fa-pen-to-square"></i></a></li>
+                            <li><a href="#"><i className="fa-solid fa-trash"></i></a></li>
                           </ul>
 
                           <img src={producto.img} style={{ width: '270px', height: '300px' }}></img>

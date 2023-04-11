@@ -26,7 +26,7 @@ const UltPublics = () => {
 
           <div>
             <input style={{ borderRadius: '14px', border: 'none', padding: '5px' }} type="search" placeholder='Buscar en la tienda' value={buscar} onChange={searcher}/>
-            <button type="button" class="btn btn-light"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button type="button" className="btn btn-light"><i className="fa-solid fa-magnifying-glass"></i></button>
           </div>
 
         </div>

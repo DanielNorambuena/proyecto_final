@@ -7,31 +7,11 @@ const CardZapatillas = ({ zapatilla }) => {
 
   const navigate = useNavigate();
 
-  const { zapatillasPedidas, setZapatillasPedidas, totalPedido, setTotalPedido } = useContext(ContextoGlobal);
+  const { agregarZapatilla } = useContext(ContextoGlobal);
 
   const verDetalle = () => {
     navigate(`/descripcion/${zapatilla.id}`);
   };
-
-  const agregarZapatilla = (zapatilla) => {
-    const idx = zapatillasPedidas.findIndex((p) => p.id === zapatilla.id);
-
-    if (idx > -1) {
-      zapatillasPedidas[idx].cant += 1;
-      setZapatillasPedidas([...zapatillasPedidas]);
-    } else {
-      const zapatillasSeleccionada = {
-        id: zapatilla.id,
-        nombre: zapatilla.nombre,
-        precio: zapatilla.precio,
-        img: zapatilla.img,
-        cant: 1,
-      };
-      setZapatillasPedidas([...zapatillasPedidas, zapatillasSeleccionada]);
-    }
-    setTotalPedido(totalPedido + zapatilla.precio);
-  };
-
 
 
   return (
@@ -57,7 +37,11 @@ const CardZapatillas = ({ zapatilla }) => {
                   </div>
                 </li>
               </ul>
-              <img src={zapatilla.img} style={{ width: '260px' }}></img>
+              <img
+                alt={zapatilla.nombre}
+                src={zapatilla.img}
+                style={{ width: '260px' }}>
+              </img>
             </div>
             <div className="part-2">
               <h3 className="product-title">{zapatilla.nombre}</h3>

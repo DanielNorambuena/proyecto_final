@@ -66,7 +66,7 @@ const CrearPublic = () => {
             style={{ margin: '1em', borderRadius: '16px', paddingRight: '3em', paddingLeft: '3em' }}
             type="button"
             variant="outline-primary"
-            class="btn btn-outline-primary"
+            className="btn btn-outline-primary"
             onClick={() => publicarProducto()}>Publicar</button>
 
         </form>

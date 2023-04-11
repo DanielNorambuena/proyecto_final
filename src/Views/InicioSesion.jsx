@@ -39,7 +39,7 @@ const InicioSesion = () => {
 
         <button style={{ margin: '1em', borderRadius: '16px', paddingRight: '2em', paddingLeft: '2em' }}
           type="button"
-          variant="outline-primary" class="btn btn-outline-primary"
+          variant="outline-primary" className="btn btn-outline-primary"
           onClick={() => validarUsuario()}>Iniciar sesión</button>
       </form>
     </div>

@@ -55,7 +55,7 @@ export const ContextoGlobalProvider = (props) => {
 
     return (
 
-        <ContextoGlobal.Provider value={{ lstUsuarios, setUsuario, usuario, lstProductos, setLstProductos, zapatillas, setZapatillas, buscar, setBuscar, searcher, resultado }}>
+        <ContextoGlobal.Provider value={{ lstUsuarios, setUsuario, usuario, lstProductos, setLstProductos, zapatillas, setZapatillas, buscar, setBuscar, searcher, resultado, totalPedido, setTotalPedido, zapatillasPedidas, setZapatillasPedidas  }}>
             {props.children}
         </ContextoGlobal.Provider>
     )

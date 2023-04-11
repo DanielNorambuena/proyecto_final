@@ -1,4 +1,4 @@
-*{
+* {
   font-family: 'Poppins', sans-serif;
 }
 
@@ -9,14 +9,14 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
- 
+
 }
 
 /*General*/
 .App {
   background-color: #f7f8fa;
   color: #556485;
-  
+
 }
 
 code {
@@ -287,7 +287,24 @@ header p {
   box-shadow: 0 2px 20px rgb(50 50 50 / 10%);
   transition: color 0.2s;
   font-family: 'Poppins', sans-serif;
-  
+
+}
+
+.caja-icono {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #ffffff;
+  color: #444444;
+  text-align: center;
+  box-shadow: 0 2px 20px rgb(50 50 50 / 10%);
+  transition: color 0.2s;
+  font-family: 'Poppins', sans-serif;
+}
+
+.caja-icono :hover {
+  color: #567bc4;
 }
 
 .section-products .single-product .part-1 ul li a:hover {
@@ -406,6 +423,6 @@ header p {
   border: 0;
 }
 
-.estilo{
+.estilo {
   font-family: 'Poppins', sans-serif;
 }

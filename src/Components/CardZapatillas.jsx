@@ -20,12 +20,13 @@ const CardZapatillas = ({ zapatilla }) => {
       zapatillasPedidas[idx].cant += 1;
       setZapatillasPedidas([...zapatillasPedidas]);
     } else {
-      const zapatillasSeleccionada = { 
+      const zapatillasSeleccionada = {
         id: zapatilla.id,
         nombre: zapatilla.nombre,
         precio: zapatilla.precio,
-        img: zapatilla.img, 
-        cant: 1 };
+        img: zapatilla.img,
+        cant: 1
+      };
       setZapatillasPedidas([...zapatillasPedidas, zapatillasSeleccionada]);
     }
     setTotalPedido(totalPedido + zapatilla.precio);
@@ -40,11 +41,21 @@ const CardZapatillas = ({ zapatilla }) => {
           <div id="product-1" className="single-product">
             <div className="part-1">
               <ul>
-                <li><a href="#"
-                  onClick={() => agregarZapatilla(zapatilla)}>
-                  <i className="fas fa-shopping-cart"></i></a></li>
-                <li><a href="#"><i className="fas fa-heart"></i></a></li>
-                <li><i className="fas fa-plus" onClick={() => verDetalle()}></i></li>
+                <li>
+                  <div className='caja-icono'>
+                    <i className="fas fa-shopping-cart" onClick={() => agregarZapatilla(zapatilla)}></i>
+                  </div>
+                </li>
+                <li>
+                  <div className='caja-icono'>
+                    <i className="fas fa-heart" ></i>
+                  </div>
+                </li>
+                <li>
+                  <div className='caja-icono'>
+                    <i className="fas fa-plus" onClick={() => verDetalle()}></i>
+                  </div>
+                </li>
               </ul>
               <img src={zapatilla.img} style={{ width: '260px' }}></img>
             </div>

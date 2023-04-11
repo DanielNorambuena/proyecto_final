@@ -15,7 +15,7 @@ const Descripcion = () => {
   return (
 
     <>
-    
+    <Header></Header>
       <Container className='d-flex' >
         <div className='imgIzquierda'>
           <img style={{ marginBottom: '1em', borderRadius: '14px' }} src={zapDetalle?.imgsec}></img>

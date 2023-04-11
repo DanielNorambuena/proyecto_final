@@ -5,7 +5,8 @@ export const ContextoGlobal = createContext({});
 export const ContextoGlobalProvider = (props) => {
     const [usuario, setUsuario] = useState({});
     const [lstProductos, setLstProductos] = useState([]);
-
+    const [zapatillasPedidas, setZapatillasPedidas] = useState([]);
+    const [totalPedido, setTotalPedido] = useState(0);
 
     const lstUsuarios = [
         {
@@ -33,8 +34,15 @@ export const ContextoGlobalProvider = (props) => {
         getZapatillas();
     }, []);
 
+
+
+
+
+
+
+
     return (
-        <ContextoGlobal.Provider value={{ lstUsuarios, setUsuario, usuario, lstProductos, setLstProductos, zapatillas, setZapatillas }}>
+        <ContextoGlobal.Provider value={{ lstUsuarios, setUsuario, usuario, lstProductos, setLstProductos, zapatillas, setZapatillas, zapatillasPedidas, setZapatillasPedidas, totalPedido, setTotalPedido }}>
             {props.children}
         </ContextoGlobal.Provider>
     )

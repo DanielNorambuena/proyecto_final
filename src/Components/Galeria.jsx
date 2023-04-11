@@ -1,4 +1,4 @@
-import React, { Suspense, useContext } from 'react'
+import React, { useContext } from 'react'
 import ContextoGlobal from '../Context/ContextoGlobal.jsx';
 import CardZapatillas from './CardZapatillas.jsx';
 import { Row, Col } from 'react-bootstrap'

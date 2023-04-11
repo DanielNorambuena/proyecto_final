@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import ContextoGlobal from '../Context/ContextoGlobal';
 import { Container } from 'react-bootstrap';

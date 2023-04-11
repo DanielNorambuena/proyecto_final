@@ -14,7 +14,7 @@ import CrearPublic from './Views/CrearPublic.jsx';
 import MisPublicaciones from './Views/MisPublicaciones.jsx';
 import BarraPrivada from './Components/BarraPrivada.jsx';
 import ContextoGlobal from './Context/ContextoGlobal.jsx';
-import { useContext, useState, useEffect } from 'react';
+import { useContext } from 'react';
 
 
 function App() {

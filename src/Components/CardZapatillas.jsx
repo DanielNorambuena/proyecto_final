@@ -25,7 +25,7 @@ const CardZapatillas = ({ zapatilla }) => {
         nombre: zapatilla.nombre,
         precio: zapatilla.precio,
         img: zapatilla.img,
-        cant: 1
+        cant: 1,
       };
       setZapatillasPedidas([...zapatillasPedidas, zapatillasSeleccionada]);
     }

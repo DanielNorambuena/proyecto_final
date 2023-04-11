@@ -22,6 +22,7 @@ export const ContextoGlobalProvider = (props) => {
 
     const [zapatillas, setZapatillas] = useState([]);
 
+
     //Llamado a la API
     const getZapatillas = async () => {
         const res = await fetch(`http://localhost:3000/sneakers.json`);
@@ -33,8 +34,27 @@ export const ContextoGlobalProvider = (props) => {
         getZapatillas();
     }, []);
 
+
+    //busqueda
+    const [buscar, setBuscar] = useState('');
+    //funcion buscar
+    const searcher = (e) => {
+        setBuscar(e.target.value)
+    }
+
+    //Filtro busqueda
+    let resultado = [];
+    if (!buscar) {
+        resultado = zapatillas
+    } else {
+        resultado = zapatillas.filter((dato) =>
+            dato.nombre.toLowerCase().includes(buscar.toLocaleLowerCase())
+        )
+    }
+
     return (
-        <ContextoGlobal.Provider value={{ lstUsuarios, setUsuario, usuario, lstProductos, setLstProductos, zapatillas, setZapatillas }}>
+
+        <ContextoGlobal.Provider value={{ lstUsuarios, setUsuario, usuario, lstProductos, setLstProductos, zapatillas, setZapatillas, buscar, setBuscar, searcher, resultado }}>
             {props.children}
         </ContextoGlobal.Provider>
     )

@@ -26,7 +26,7 @@ const InicioSesion = () => {
 
 
   return (
-    <div>
+    <div className='estilo'>
       <h1 style={{ fontSize: '18pt', marginTop: '3em', marginBottom: '2em', textAlign: 'center' }}>Inicia Sesión</h1>
       <form className='editForm'>
         <input type="text" name="email"

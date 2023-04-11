@@ -5,7 +5,7 @@ import { Row, Col } from 'react-bootstrap'
 
 const Galeria = () => {
   
-  const { zapatillas } = useContext(ContextoGlobal);
+  const { resultado } = useContext(ContextoGlobal);
 
   return (
     <>
@@ -13,7 +13,7 @@ const Galeria = () => {
         <div className="container">
           <Row className='mx-5'>
             {
-              zapatillas.map((zapatilla) => {
+              resultado.map((zapatilla) => {
                 return <Col key={zapatilla.id}><CardZapatillas zapatilla={zapatilla}></CardZapatillas></Col>
               })
             }

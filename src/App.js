@@ -20,6 +20,7 @@ import { useContext, useState, useEffect } from 'react';
 function App() {
   const { usuario, } = useContext(ContextoGlobal);
 
+
   return (
     <>
         <BrowserRouter>

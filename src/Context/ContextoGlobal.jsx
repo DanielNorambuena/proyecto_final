@@ -36,7 +36,6 @@ export const ContextoGlobalProvider = (props) => {
     }, []);
 
 
-<<<<<<< HEAD
     //busqueda
     const [buscar, setBuscar] = useState('');
     //funcion buscar
@@ -57,16 +56,6 @@ export const ContextoGlobalProvider = (props) => {
     return (
 
         <ContextoGlobal.Provider value={{ lstUsuarios, setUsuario, usuario, lstProductos, setLstProductos, zapatillas, setZapatillas, buscar, setBuscar, searcher, resultado }}>
-=======
-
-
-
-
-
-
-    return (
-        <ContextoGlobal.Provider value={{ lstUsuarios, setUsuario, usuario, lstProductos, setLstProductos, zapatillas, setZapatillas, zapatillasPedidas, setZapatillasPedidas, totalPedido, setTotalPedido }}>
->>>>>>> 327dce29d316158418d97c582c743524a119728f
             {props.children}
         </ContextoGlobal.Provider>
     )

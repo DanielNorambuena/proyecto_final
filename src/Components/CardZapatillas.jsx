@@ -44,11 +44,7 @@ const CardZapatillas = ({ zapatilla }) => {
                   onClick={() => agregarZapatilla(zapatilla)}>
                   <i className="fas fa-shopping-cart"></i></a></li>
                 <li><a href="#"><i className="fas fa-heart"></i></a></li>
-<<<<<<< HEAD
                 <li><i className="fas fa-plus" onClick={() => verDetalle()}></i></li>
-=======
-                <li><i className="fas fa-plus"  onClick={() => verDetalle()}></i></li>
->>>>>>> 327dce29d316158418d97c582c743524a119728f
               </ul>
               <img src={zapatilla.img} style={{ width: '260px' }}></img>
             </div>

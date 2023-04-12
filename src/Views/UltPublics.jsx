@@ -9,9 +9,14 @@ const UltPublics = () => {
   const [value, setValue] = useState();
 
   const handleChange = (event) => {
-
     setValue(event.target.value);
-    return zapatillas.sort((a, b) => a.precio - b.precio)
+    if (value === 'mayorA') {
+      return zapatillas.sort((a, b) => b.precio - a.precio)
+    } if (value === 'menorA') {
+      return zapatillas.sort((a, b) => a.precio - b.precio)
+    } else {
+      return zapatillas;
+    }
   };
 
   //zapatillas.sort((a, b) => a.precio - b.precio)
@@ -29,6 +34,7 @@ const UltPublics = () => {
         <div className='sort'>
           <div className='d-flex'>
             <p style={{ marginRight: '1em', marginLeft: '1em', marginBottom: 0 }}>Ordenar por:</p>
+
             <select value={value} onChange={handleChange}>
               <option value='default'>Seleccione</option>
               <option value='menorA'>Menor a mayor precio</option>

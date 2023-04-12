@@ -64,13 +64,6 @@ export const ContextoGlobalProvider = (props) => {
         )
     }
 
-    //filtro sort
-
-
-
-    //Likes
-
-
     //agregar zapatilla al carrito
     const agregarZapatilla = (zapatilla) => {
         const idx = zapatillasPedidas.findIndex((p) => p.id === zapatilla.id);

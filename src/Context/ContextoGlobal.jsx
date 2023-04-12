@@ -11,14 +11,24 @@ export const ContextoGlobalProvider = (props) => {
 
     const lstUsuarios = [
         {
+            id: '1',
             email: 'daniel@gmail.com',
             clave: '123',
             name: 'Daniel',
+            img: 'https://media.istockphoto.com/id/509286952/es/foto/mantener-sonriendo.jpg?s=612x612&w=0&k=20&c=-K11x3Ryv5-aBV4dkm30GKrn1lfXi2z3gfVHnZEOT_U=',
+            rut: '20.158.418-8',
+            telefono: '+569 4512 4852',
+            direccion: 'Villa Dulce #4523',
         },
         {
+            id: '2',
             email: 'daniela@gmail.com',
             clave: '123',
             name: 'Daniela',
+            img: 'https://img.freepik.com/foto-gratis/retrato-hermoso-mujer-joven-posicion-pared-gris_231208-10760.jpg?w=2000',
+            rut: '21.548.369-4',
+            telefono: '+569 8542 4152',
+            direccion: 'Villa Rojas #1784',
         },
     ];
 

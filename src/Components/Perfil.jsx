@@ -12,10 +12,13 @@ const Perfil = () => {
     return (
         <div className='caja'>
             <div className='perfil-contenedor'>
-                <img className='imgRedonda' src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png'></img>
+                <img className='imgRedonda' alt={usuario.name} src={usuario.img}></img>
                 <div>
-                    <h3>Hola: {usuario.name}</h3>
-                    <p>Editar Perfil</p>
+                    <h3 style={{ marginLeft: '5px' }}>Hola: {usuario.name}</h3>
+                    <NavLink
+                        style={{ textDecoration: 'none' }}
+                        className={({ isActive }) => (isActive ? "viewActiva" : "view")}
+                        to="/EditarPerfil">Editar Perfil</NavLink>
                 </div>
             </div>
             <Navbar >

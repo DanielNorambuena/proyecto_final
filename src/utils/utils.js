@@ -6,3 +6,4 @@ const calculaTotalPedido = (lstProductos) => {
     return total;
 }
 export { calculaTotalPedido }
+

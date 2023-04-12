@@ -15,6 +15,7 @@ import MisPublicaciones from './Views/MisPublicaciones.jsx';
 import BarraPrivada from './Components/BarraPrivada.jsx';
 import ContextoGlobal from './Context/ContextoGlobal.jsx';
 import { useContext } from 'react';
+import EditarPerfil from './Views/EditarPerfil.jsx';
 
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
                 <Route path='/CrearPublic' element={<CrearPublic></CrearPublic>}></Route>
                 <Route path='/MisPublicaciones' element={<MisPublicaciones></MisPublicaciones>}></Route>
                 <Route path='/Carrito' element={<Carrito></Carrito>}></Route>
+                <Route path='/EditarPerfil' element={<EditarPerfil></EditarPerfil>}></Route>
               </>
             }
             <Route path="*" element={<NotFound />} />

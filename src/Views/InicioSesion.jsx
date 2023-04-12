@@ -15,12 +15,22 @@ const InicioSesion = () => {
   const validarUsuario = () => {
     const usuarioValido = lstUsuarios.find((usuario) => usuario.email === email && usuario.clave === password);
 
-   
+
     if (usuarioValido) {
-      setUsuario({conectado: true, name: usuarioValido.name});
+      setUsuario({
+        conectado: true,
+        id: usuarioValido.id,
+        name: usuarioValido.name,
+        clave: usuarioValido.clave,
+        email: usuarioValido.email,
+        img: usuarioValido.img,
+        rut: usuarioValido.rut,
+        telefono: usuarioValido.telefono,
+        direccion: usuarioValido.direccion,
+      });
       navigate('/');
     } else {
-      
+
     }
   }
 

@@ -30,10 +30,9 @@ const UltPublics = () => {
           <div className='d-flex'>
             <p style={{ marginRight: '1em', marginLeft: '1em', marginBottom: 0 }}>Ordenar por:</p>
             <select value={value} onChange={handleChange}>
-
               <option value='default'>Seleccione</option>
-              <option value='menorA'>menor</option>
-              <option value='mayorA'>mayor</option>
+              <option value='menorA'>Menor a mayor precio</option>
+              <option value='mayorA'>Mayor a menor precio</option>
             </select>
 
           </div>

@@ -1,11 +1,11 @@
-import React, { useContext} from 'react'
-import { Container } from 'react-bootstrap'
+import React, { useContext, useState } from 'react'
+import { Container, Col, Card } from 'react-bootstrap'
 import Header from '../Components/Header'
 import Galeria from '../Components/Galeria.jsx'
 import ContextoGlobal from '../Context/ContextoGlobal'
 
 const UltPublics = () => {
-  const { buscar, searcher } = useContext(ContextoGlobal);
+  const { buscar, searcher, sort, setSort, sorting   } = useContext(ContextoGlobal);
 
   return (
     <>
@@ -18,14 +18,16 @@ const UltPublics = () => {
         <div className='sort'>
           <div className='d-flex'>
             <p style={{ marginRight: '1em', marginLeft: '1em', marginBottom: 0 }}>Ordenar por:</p>
-            <select>
-              <option value="Menor a mayor">Menor precio a mayor</option>
-              <option value="Mayor a menor">Mayor precio a menor</option>
+            <select value={sort} onChange={sorting}>
+                <option value='seleccionar'>Seleccionar</option>
+                <option value='low'>low</option>
+                <option value='high'>high</option>
             </select>
+
           </div>
 
           <div>
-            <input style={{ borderRadius: '14px', border: 'none', padding: '5px' }} type="search" placeholder='Buscar en la tienda' value={buscar} onChange={searcher}/>
+            <input style={{ borderRadius: '14px', border: 'none', padding: '5px' }} type="search" placeholder='Buscar en la tienda' value={buscar} onChange={searcher} />
             <button type="button" className="btn btn-light"><i className="fa-solid fa-magnifying-glass"></i></button>
           </div>
 
@@ -33,8 +35,7 @@ const UltPublics = () => {
 
 
         <Galeria>
- 
-          </Galeria>
+        </Galeria>
       </Container >
 
     </>

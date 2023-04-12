@@ -1,13 +1,23 @@
-import React, { useContext } from 'react'
-import { Container} from 'react-bootstrap'
+import React, { useContext, useState } from 'react'
+import { Container } from 'react-bootstrap'
 import Header from '../Components/Header'
 import ContextoGlobal from '../Context/ContextoGlobal'
 import Galeria from '../Components/Galeria.jsx'
 
-
 const UltPublics = () => {
-  const { buscar, searcher } = useContext(ContextoGlobal);
- 
+  const { buscar, searcher, zapatillas } = useContext(ContextoGlobal);
+  const [value, setValue] = useState();
+
+  const handleChange = (event) => {
+
+    setValue(event.target.value);
+    return zapatillas.sort((a, b) => a.precio - b.precio)
+  };
+
+  //zapatillas.sort((a, b) => a.precio - b.precio)
+  //console.log(zapatillas);
+
+
   return (
     <>
       <Header></Header>
@@ -19,10 +29,11 @@ const UltPublics = () => {
         <div className='sort'>
           <div className='d-flex'>
             <p style={{ marginRight: '1em', marginLeft: '1em', marginBottom: 0 }}>Ordenar por:</p>
-            <select>
-              <option value="default">Seleccione</option>
-              <option value="menorA">Menor precio a mayor</option>
-              <option value="mayorA">Mayor precio a menor</option>
+            <select value={value} onChange={handleChange}>
+
+              <option value='default'>Seleccione</option>
+              <option value='menorA'>menor</option>
+              <option value='mayorA'>mayor</option>
             </select>
 
           </div>
@@ -33,7 +44,7 @@ const UltPublics = () => {
           </div>
 
         </div>
-       <Galeria></Galeria>
+        <Galeria></Galeria>
       </Container >
 
     </>

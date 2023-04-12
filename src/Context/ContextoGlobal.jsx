@@ -64,28 +64,12 @@ export const ContextoGlobalProvider = (props) => {
         )
     }
 
-    //Filtro ordenar por precio
-    const [sort, setSort] = useState('');
+    //filtro sort
 
-    //funcion ordenar
-    let sorting = (e) => {
-        setSort(e.target.value);
-    }
 
-    let resZap = [];
-    if (sort === 'seleccionar') {
-        return zapatillas
-    }
-    if (sort === 'menorA') {
-        return zapatillas.precio > zapatillas.precio ? 1 : -1
-    }
-    if (sort === 'mayorA') {
-        return zapatillas.precio < zapatillas.precio ? 1 : -1
-    }
-    console.log(setSort);
 
     //Likes
- 
+
 
     //agregar zapatilla al carrito
     const agregarZapatilla = (zapatilla) => {
@@ -130,8 +114,7 @@ export const ContextoGlobalProvider = (props) => {
             setZapatillasPedidas,
             agregarZapatilla,
             calculaTotalPedido,
-            sort, setSort, sorting, resZap
-        }}>
+                }}>
             {props.children}
         </ContextoGlobal.Provider>
     )

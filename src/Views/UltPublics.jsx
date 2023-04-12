@@ -1,11 +1,15 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import { Container, Col, Card } from 'react-bootstrap'
 import Header from '../Components/Header'
-import Galeria from '../Components/Galeria.jsx'
 import ContextoGlobal from '../Context/ContextoGlobal'
+import GaleriaFiltrada from '../Components/GaleriaFiltrada.jsx'
+
 
 const UltPublics = () => {
-  const { buscar, searcher, sort, setSort, sorting   } = useContext(ContextoGlobal);
+  const { buscar, searcher, zapatillas } = useContext(ContextoGlobal);
+
+  zapatillas.sort((a,b) => a.precio - b.precio)
+  console.log(zapatillas);
 
   return (
     <>
@@ -18,10 +22,10 @@ const UltPublics = () => {
         <div className='sort'>
           <div className='d-flex'>
             <p style={{ marginRight: '1em', marginLeft: '1em', marginBottom: 0 }}>Ordenar por:</p>
-            <select value={sort} onChange={sorting}>
-                <option value='seleccionar'>Seleccionar</option>
-                <option value='low'>low</option>
-                <option value='high'>high</option>
+            <select >
+              <option value="default">Seleccione</option>
+              <option value="menorA">Menor precio a mayor</option>
+              <option value="mayorA">Mayor precio a menor</option>
             </select>
 
           </div>
@@ -32,10 +36,7 @@ const UltPublics = () => {
           </div>
 
         </div>
-
-
-        <Galeria>
-        </Galeria>
+        <GaleriaFiltrada></GaleriaFiltrada>
       </Container >
 
     </>

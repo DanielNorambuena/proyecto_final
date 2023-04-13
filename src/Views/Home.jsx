@@ -14,10 +14,11 @@ const Home = () => {
         <h2>Últimas publicaciones</h2>
       </div>
       <GaleriaComplementa></GaleriaComplementa>
+
       <section className='banner'>
       </section>
 
-      <section className='blog mb-5'>
+      <section className='blog mb-5 mt-5'>
         <div>
           <img style={{ borderRadius: '14px', width: '400px', height: 'auto', margin: '3em' }} src='https://www.highsnobiety.com/static-assets/wp-content/uploads/2022/07/11114942/ezgif.com-gif-maker-62.gif'></img>
         </div>

@@ -362,7 +362,7 @@ header p {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 240px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -374,7 +374,7 @@ header p {
 }
 
 .publicidad {
-  background-image: url("https://www.paris.cl/on/demandware.static/-/Sites/es_CL/dw0c086768/marketing/imagenes/zapatillas/banner_zapatillas_larga-vida_mar22.jpg");
+  background-image: url("Img/banner_dos.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -386,7 +386,7 @@ header p {
   text-align: center;
   color: white;
   margin-top: 5em;
-  margin-bottom: 2em;
+  margin-bottom: 0.5em;
 }
 
 

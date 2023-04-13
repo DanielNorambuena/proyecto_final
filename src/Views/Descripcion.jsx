@@ -7,7 +7,7 @@ import GaleriaComplementa from '../Components/GaleriaComplementa';
 
 const Descripcion = () => {
   const { id } = useParams();
-  const { zapatillas, agregarZapatilla } = useContext(ContextoGlobal);
+  const { zapatillas, agregarZapatilla, agregarFavorito} = useContext(ContextoGlobal);
 
   const idZapatilla = zapatillas.findIndex((p) => p.id === id);
   const zapDetalle = zapatillas[idZapatilla];
@@ -37,7 +37,11 @@ const Descripcion = () => {
               type="button"
               className="btn btn-outline-dark"
               onClick={() => agregarZapatilla(zapDetalle)}>Agregar al carrito</button>
-            <button style={{ borderRadius: '16px' }} type="button" className="btn btn-outline-dark"><i className="fa-solid fa-heart"></i></button>
+            <button 
+            style={{ borderRadius: '16px' }} 
+            type="button" 
+            className="btn btn-outline-dark"
+            onClick={() => agregarFavorito(zapDetalle)}><i className="fa-solid fa-heart"></i></button>
           </div>
         </div>
       </Container>

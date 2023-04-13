@@ -12,15 +12,13 @@ const UltPublics = () => {
     setValue(event.target.value);
     if (value === 'mayorA') {
       return zapatillas.sort((a, b) => b.precio - a.precio)
-    } if (value === 'menorA') {
+    } else if (value === 'menorA') {
       return zapatillas.sort((a, b) => a.precio - b.precio)
     } else {
       return zapatillas;
     }
   };
 
-  //zapatillas.sort((a, b) => a.precio - b.precio)
-  //console.log(zapatillas);
 
 
   return (

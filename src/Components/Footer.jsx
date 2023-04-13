@@ -3,7 +3,7 @@ import logoblanco from '../Img/logoblanco.png'
 
 const Footer = () => {
   return (
-    <div style={{ backgroundColor: '#6678a0', height: '12rem', marginTop: '100px' }} className='estilo'>
+    <div style={{ backgroundColor: '#6678a0', height: '12rem', marginTop: '50px' }} className='estilo'>
       <div className='d-flex justify-content-center'>
         <div>
         <div>

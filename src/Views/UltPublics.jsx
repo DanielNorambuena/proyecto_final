@@ -6,20 +6,21 @@ import Galeria from '../Components/Galeria.jsx'
 
 const UltPublics = () => {
   const { buscar, searcher, zapatillas } = useContext(ContextoGlobal);
-  const [value, setValue] = useState();
+  const [value, setValue] = useState('');
 
   const handleChange = (event) => {
     setValue(event.target.value);
-    if (value === 'mayorA') {
-      return zapatillas.sort((a, b) => b.precio - a.precio)
-    } else if (value === 'menorA') {
+    if (event.target.value === 'default') {
+      return zapatillas.sort((a, b) => a.id - b.id)
+    }
+    if (event.target.value === 'menorA') {
       return zapatillas.sort((a, b) => a.precio - b.precio)
+    } else if (event.target.value === 'mayorA') {
+      return zapatillas.sort((a, b) => b.precio - a.precio)
     } else {
       return zapatillas;
     }
   };
-
-
 
   return (
     <>

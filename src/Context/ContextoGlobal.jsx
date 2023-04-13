@@ -63,6 +63,7 @@ export const ContextoGlobalProvider = (props) => {
             dato.nombre.toLowerCase().includes(buscar.toLocaleLowerCase())
         )
     }
+    
 
     //agregar zapatilla al carrito
     const agregarZapatilla = (zapatilla) => {

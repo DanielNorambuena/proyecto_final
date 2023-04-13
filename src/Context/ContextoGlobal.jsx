@@ -1,5 +1,4 @@
 import { createContext, useEffect, useState } from "react";
-import { calculaTotalPedido } from '../utils/utils';
 
 export const ContextoGlobal = createContext({});
 
@@ -8,6 +7,7 @@ export const ContextoGlobalProvider = (props) => {
     const [lstProductos, setLstProductos] = useState([]);
     const [zapatillasPedidas, setZapatillasPedidas] = useState([]);
     const [totalPedido, setTotalPedido] = useState(0);
+    const [zapatillasLike, setZapatillasLike] = useState([]);
 
     const lstUsuarios = [
         {
@@ -63,7 +63,7 @@ export const ContextoGlobalProvider = (props) => {
             dato.nombre.toLowerCase().includes(buscar.toLocaleLowerCase())
         )
     }
-    
+
 
     //agregar zapatilla al carrito
     const agregarZapatilla = (zapatilla) => {
@@ -82,10 +82,29 @@ export const ContextoGlobalProvider = (props) => {
             };
             setZapatillasPedidas([...zapatillasPedidas, zapatillasSeleccionada]);
         }
-
-        setTotalPedido(calculaTotalPedido(zapatillasPedidas));
     };
+    const total = zapatillasPedidas.reduce((a, { cant, precio }) => a + precio * cant, 0);
 
+    //agregar zapatilla a favoritos
+    const agregarFavorito = (zapatilla) => {
+        const idx = zapatillasLike.findIndex((p) => p.id === zapatilla.id);
+
+        if (idx > -1) {
+            zapatillasLike[idx].cant += 0;
+            setZapatillasLike(zapatillasLike);
+        } else {
+            const zapatillaLikeSeleccionada = {
+                id: zapatilla.id,
+                nombre: zapatilla.nombre,
+                precio: zapatilla.precio,
+                precioanterior: zapatilla.precioanterior,
+                img: zapatilla.img,
+                cant: 1,
+            }
+            setZapatillasLike([...zapatillasLike, zapatillaLikeSeleccionada]);
+        }
+    }
+    const totalLike = zapatillasLike.reduce((a, { cant }) => a + cant, 0);
 
 
     return (
@@ -107,8 +126,12 @@ export const ContextoGlobalProvider = (props) => {
             zapatillasPedidas,
             setZapatillasPedidas,
             agregarZapatilla,
-            calculaTotalPedido,
-                }}>
+            zapatillasLike,
+            setZapatillasLike,
+            totalLike,
+            agregarFavorito,
+            total,
+        }}>
             {props.children}
         </ContextoGlobal.Provider>
     )

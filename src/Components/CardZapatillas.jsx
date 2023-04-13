@@ -7,12 +7,11 @@ const CardZapatillas = ({ zapatilla }) => {
 
   const navigate = useNavigate();
 
-  const { agregarZapatilla } = useContext(ContextoGlobal);
+  const { agregarZapatilla, agregarFavorito } = useContext(ContextoGlobal);
 
   const verDetalle = () => {
     navigate(`/descripcion/${zapatilla.id}`);
   };
-
 
   return (
     <>
@@ -23,17 +22,17 @@ const CardZapatillas = ({ zapatilla }) => {
               <ul>
                 <li>
                   <div className='caja-icono'>
-                    <i className="fas fa-shopping-cart" style={{cursor:'pointer'}} onClick={() => agregarZapatilla(zapatilla)}></i>
+                    <i className="fas fa-shopping-cart" style={{ cursor: 'pointer' }} onClick={() => agregarZapatilla(zapatilla)}></i>
                   </div>
                 </li>
                 <li>
                   <div className='caja-icono'>
-                    <i className="fas fa-heart" style={{cursor:'pointer'}}></i>
+                    <i className="fas fa-heart" style={{ cursor: 'pointer' }} onClick={() => agregarFavorito(zapatilla)}></i>
                   </div>
                 </li>
                 <li>
                   <div className='caja-icono'>
-                    <i className="fas fa-plus" style={{cursor:'pointer'}} onClick={() => verDetalle()}></i>
+                    <i className="fas fa-plus" style={{ cursor: 'pointer' }} onClick={() => verDetalle()}></i>
                   </div>
                 </li>
               </ul>

@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 import ContextoGlobal from '../Context/ContextoGlobal';
-import { calculaTotalPedido } from '../utils/utils';
 import { NavLink } from 'react-router-dom';
 
 const Carrito = () => {
 
-  const { zapatillasPedidas, totalPedido, setZapatillasPedidas, setTotalPedido } = useContext(ContextoGlobal);
+  const { zapatillasPedidas, setZapatillasPedidas, total } = useContext(ContextoGlobal);
+
 
   const disminuirCantidad = (id) => {
     const idx = zapatillasPedidas.findIndex((p) => p.id === id);
@@ -19,7 +19,6 @@ const Carrito = () => {
       }
       setZapatillasPedidas([...zapatillasPedidas]);
     }
-    setTotalPedido(calculaTotalPedido(zapatillasPedidas));
   }
 
   const aumentarCantidad = (id) => {
@@ -29,7 +28,6 @@ const Carrito = () => {
       zapatillasPedidas[idx].cant += 1;
       setZapatillasPedidas([...zapatillasPedidas]);
     }
-    setTotalPedido(calculaTotalPedido(zapatillasPedidas));
   }
 
 
@@ -86,7 +84,7 @@ const Carrito = () => {
             }
 
             <hr />
-            <div className='fs-5' >Total Pedido:<strong className='px-3'>{totalPedido.toLocaleString('es-CL', { style: 'currency', currency: 'CLP' })}</strong></div>
+            <div className='fs-5' >Total Pedido:<strong className='px-3'>$ {total.toLocaleString('es-CL')}</strong></div>
           </div>
         </div>
       </div>

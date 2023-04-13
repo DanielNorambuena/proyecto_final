@@ -6,8 +6,8 @@ import ContextoGlobal from '../Context/ContextoGlobal'
 
 const BarraPrivada = () => {
 
-    const { setUsuario, usuario, totalPedido } = useContext(ContextoGlobal);
-    const totalPedidoMoneda = totalPedido.toLocaleString('es-CL', { style: 'currency', currency: 'CLP' });
+    const { setUsuario, usuario, total, totalLike } = useContext(ContextoGlobal);
+    const totalbarra = total.toLocaleString('es-CL', { style: 'currency', currency: 'CLP' });
 
     const navigate = useNavigate();
 
@@ -31,8 +31,8 @@ const BarraPrivada = () => {
                         <NavDropdown.Item> <NavLink to="/MisPublicaciones" className="barra-privada" >Mis Publicaciones</NavLink></NavDropdown.Item>
                     </NavDropdown>
 
-                    <NavLink style={{ marginRight: '2em' }} className={({ isActive }) => (isActive ? "viewActiva" : "view")} to="/Carrito"><i className="fa-solid fa-cart-shopping"></i>{totalPedidoMoneda}</NavLink>
-                    <NavLink style={{ marginRight: '2em' }} className={({ isActive }) => (isActive ? "viewActiva" : "view")} to="/Favoritos"><i className="fa-solid fa-heart"></i></NavLink>
+                    <NavLink style={{ marginRight: '2em' }} className={({ isActive }) => (isActive ? "viewActiva" : "view")} to="/Favoritos"><i className="fa-solid fa-heart"></i> {totalLike}</NavLink>
+                    <NavLink style={{ marginRight: '2em' }} className={({ isActive }) => (isActive ? "viewActiva" : "view")} to="/Carrito"><i className="fa-solid fa-cart-shopping"></i> {totalbarra}</NavLink> 
                     <NavLink className={({ isActive }) => (isActive ? "viewActiva" : "view")}  onClick={() => cerrarApp()}><i className="fa-solid fa-right-from-bracket"></i></NavLink>
                 </Nav>
             </Container>

@@ -6,8 +6,8 @@ import ContextoGlobal from '../Context/ContextoGlobal'
 
 const Barra = () => {
 
-  const { totalPedido } = useContext(ContextoGlobal);
-  const totalPedidoMoneda = totalPedido.toLocaleString('es-CL', { style: 'currency', currency: 'CLP' });
+  const { total, totalLike } = useContext(ContextoGlobal);
+  const totalbarra = total.toLocaleString('es-CL', { style: 'currency', currency: 'CLP' });
 
 
   return (
@@ -18,8 +18,8 @@ const Barra = () => {
           <NavLink style={{ marginRight: '2em' }} className={({ isActive }) => (isActive ? "viewActiva" : "view")} to="/UltPublics">Catálogo de productos</NavLink>
           <NavLink className={({ isActive }) => (isActive ? "viewActiva" : "view")} to="/InicioSesion">Iniciar sesión</NavLink>
           <NavLink style={{ border: '1px solid', borderRadius: '14px', marginLeft: '1em', marginRight: '1.5em', color: '#4688b1' }} className={({ isActive }) => (isActive ? "viewActiva" : "view")} to="/Registro">Registrate</NavLink>
-          <NavLink style={{ marginRight: '2em' }} className={({ isActive }) => (isActive ? "viewActiva" : "view")} to="/InicioSesion"><i className="fa-solid fa-heart"></i></NavLink>
-          <NavLink className={({ isActive }) => (isActive ? "viewActiva" : "view")} to="/InicioSesion"><i className="fa-solid fa-cart-shopping"></i>{totalPedidoMoneda}</NavLink>
+          <NavLink style={{ marginRight: '2em' }} className={({ isActive }) => (isActive ? "viewActiva" : "view")} to="/InicioSesion"><i className="fa-solid fa-heart"></i> {totalLike}</NavLink>
+          <NavLink className={({ isActive }) => (isActive ? "viewActiva" : "view")} to="/InicioSesion"><i className="fa-solid fa-cart-shopping"></i> {totalbarra}</NavLink>
         </Nav>
       </Container>
     </Navbar>

@@ -107,6 +107,9 @@ export const ContextoGlobalProvider = (props) => {
     const totalLike = zapatillasLike.reduce((a, { cant }) => a + cant, 0);
 
 
+
+
+
     return (
 
         <ContextoGlobal.Provider value={{

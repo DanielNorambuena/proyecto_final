@@ -5,7 +5,14 @@ import { Row } from 'react-bootstrap';
 
 const GaleriaFavoritos = () => {
 
-  const { zapatillasLike } = useContext(ContextoGlobal);
+  const { zapatillasLike, setZapatillasLike } = useContext(ContextoGlobal);
+
+
+  const eliminarFavoritos = (id) => {
+    const filteredFavoritos = zapatillasLike.filter(zapatillasLike => zapatillasLike.id !== id)
+    setZapatillasLike(filteredFavoritos)
+  }
+
 
   return (
     <section className="section-products">
@@ -19,8 +26,13 @@ const GaleriaFavoritos = () => {
                     <div className="single-product">
                       <div className="part-1">
                         <ul>
-                          <li><a href="#"><i className="fa-solid fa-trash"></i></a></li>
+                          <li>
+                            <div className='caja-icono'>
+                              <i className="fa-solid fa-trash" style={{ cursor: 'pointer' }} onClick={() => eliminarFavoritos(p.id)} ></i>
+                            </div>
+                          </li>
                         </ul>
+
 
                         <img alt={p.nombre} src={p.img} style={{ width: '270px', height: '300px' }}></img>
                       </div>

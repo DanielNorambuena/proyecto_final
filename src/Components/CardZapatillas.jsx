@@ -27,7 +27,7 @@ const CardZapatillas = ({ zapatilla }) => {
                 </li>
                 <li>
                   <div className='caja-icono'>
-                    <i className="fas fa-heart" style={{ cursor: 'pointer' }} onClick={() => agregarFavorito(zapatilla)} ></i>
+                    <i className="fas fa-heart" style={{ cursor: 'pointer' }} onClick={() => agregarFavorito(zapatilla)}></i>
                   </div>
                 </li>
                 <li>

@@ -37,7 +37,7 @@ export const ContextoGlobalProvider = (props) => {
 
     //Llamado a la API
     const getZapatillas = async () => {
-        const res = await fetch(`http://localhost:3000/sneakers.json`);
+        const res = await fetch("/sneakers.json");
         const data = await res.json();
         setZapatillas(data);
     }

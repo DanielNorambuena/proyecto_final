@@ -30,7 +30,7 @@ const InicioSesion = () => {
       });
       navigate('/');
     } else {
-
+      window.alert("Faltan datos");
     }
   }
 
@@ -46,6 +46,7 @@ const InicioSesion = () => {
         <input type="password" name="password"
           placeholder='Contraseña'
           onChange={(e) => setPassword(e.target.value)} />
+          
 
         <button style={{ margin: '1em', borderRadius: '16px', paddingRight: '2em', paddingLeft: '2em' }}
           type="button"

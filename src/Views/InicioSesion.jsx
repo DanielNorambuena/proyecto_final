@@ -8,6 +8,7 @@ const InicioSesion = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+
   const { lstUsuarios, setUsuario } = useContext(ContextoGlobal);
   const navigate = useNavigate();
 
@@ -30,7 +31,7 @@ const InicioSesion = () => {
       });
       navigate('/');
     } else {
-      window.alert("Faltan datos");
+      alert('Usuario invalido');
     }
   }
 
@@ -41,12 +42,14 @@ const InicioSesion = () => {
       <form className='editForm'>
         <input type="text" name="email"
           placeholder='Email'
-          onChange={(e) => setEmail(e.target.value)} />
+          onChange={(e) => setEmail(e.target.value)}
+          required />
 
         <input type="password" name="password"
           placeholder='Contraseña'
-          onChange={(e) => setPassword(e.target.value)} />
-          
+          onChange={(e) => setPassword(e.target.value)}
+          required />
+
 
         <button style={{ margin: '1em', borderRadius: '16px', paddingRight: '2em', paddingLeft: '2em' }}
           type="button"

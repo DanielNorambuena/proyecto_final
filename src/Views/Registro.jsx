@@ -27,25 +27,31 @@ const Registro = () => {
       <form className='editForm'>
         <input type="text" name="name"
           placeholder='Nombre'
-          onChange={(e) => setName(e.target.value)} />
+          onChange={(e) => setName(e.target.value)}
+          required />
         <div className='editForm1'>
           <input className='input1' type="text" name="rut"
             placeholder='Rut'
-            onChange={(e) => setRut(e.target.value)} />
+            onChange={(e) => setRut(e.target.value)} 
+            required/>
           <input type="tel" name="telefono"
             placeholder='Teléfono'
-            onChange={(e) => setTelefono(e.target.value)} />
+            onChange={(e) => setTelefono(e.target.value)} 
+            required/>
         </div>
         <input type="email" name="email"
           placeholder='Correo'
-          onChange={(e) => setEmail(e.target.value)} />
+          onChange={(e) => setEmail(e.target.value)} 
+          required/>
         <input type="text" name="text"
           placeholder='Dirección'
-          onChange={(e) => setDireccion(e.target.value)} />
+          onChange={(e) => setDireccion(e.target.value)}
+          required />
         <div className='editForm1'>
           <input className='input1' type="password" name="text"
             placeholder='Contraseña'
-            onChange={(e) => setClave(e.target.value)} />
+            onChange={(e) => setClave(e.target.value)}
+            required />
           <input type="password" name="text" placeholder='Repetir Contraseña' />
         </div>
         <button style={{ margin: '1em', borderRadius: '16px', paddingRight: '2em', paddingLeft: '2em' }}
